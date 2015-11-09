@@ -51,13 +51,13 @@
                                         <rect key="frame" x="222" y="8" width="117" height="19"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="0.40784313725490196" green="0.75686274509803919" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aar-Se-peV">
                                         <rect key="frame" x="10" y="40" width="80" height="80"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player-red" translatesAutoresizingMaskIntoConstraints="NO" id="aOK-fd-R4H">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player-red" translatesAutoresizingMaskIntoConstraints="NO" id="aOK-fd-R4H">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                 <animations/>
                                             </imageView>
@@ -75,7 +75,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bb9-ar-yYU">
                                         <rect key="frame" x="240" y="40" width="80" height="80"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="player-yellow" translatesAutoresizingMaskIntoConstraints="NO" id="chL-n8-N5a">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="player-yellow" translatesAutoresizingMaskIntoConstraints="NO" id="chL-n8-N5a">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                 <animations/>
                                             </imageView>
@@ -86,11 +86,27 @@
                                             <constraint firstAttribute="width" constant="80" id="WZZ-Rh-gMw"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iaG-cY-fsg">
+                                        <rect key="frame" x="470" y="40" width="80" height="80"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="player-blue" translatesAutoresizingMaskIntoConstraints="NO" id="J6s-re-XTM">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <animations/>
+                                            </imageView>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="3hz-Fl-UXI"/>
+                                            <constraint firstAttribute="width" constant="80" id="6yi-u8-RxB"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <animations/>
                                 <constraints>
                                     <constraint firstItem="aar-Se-peV" firstAttribute="top" secondItem="Zv0-c0-wjS" secondAttribute="top" constant="40" id="HH3-kC-yJB"/>
                                     <constraint firstItem="qgm-Zw-yOe" firstAttribute="top" secondItem="Zv0-c0-wjS" secondAttribute="top" constant="8" id="MMi-Hp-SMw"/>
+                                    <constraint firstItem="iaG-cY-fsg" firstAttribute="top" secondItem="Zv0-c0-wjS" secondAttribute="top" constant="40" id="PVA-lB-ldY"/>
+                                    <constraint firstAttribute="trailing" secondItem="iaG-cY-fsg" secondAttribute="trailing" constant="10" id="Q9u-h9-LfU"/>
                                     <constraint firstItem="aar-Se-peV" firstAttribute="leading" secondItem="Zv0-c0-wjS" secondAttribute="leading" constant="10" id="X2C-o3-SmH"/>
                                     <constraint firstItem="Bb9-ar-yYU" firstAttribute="top" secondItem="qgm-Zw-yOe" secondAttribute="bottom" constant="13" id="b2K-lh-aiX"/>
                                     <constraint firstItem="Bb9-ar-yYU" firstAttribute="centerX" secondItem="Zv0-c0-wjS" secondAttribute="centerX" id="jXW-s4-OlS"/>
@@ -129,6 +145,7 @@
     </scenes>
     <resources>
         <image name="bg" width="320" height="568"/>
+        <image name="player-blue" width="88" height="88"/>
         <image name="player-red" width="88" height="88"/>
         <image name="player-yellow" width="88" height="88"/>
         <image name="settings-button" width="98" height="100"/>
