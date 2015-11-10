@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -100,14 +100,62 @@
                                             <constraint firstAttribute="width" constant="80" id="6yi-u8-RxB"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k06-OY-Wou">
+                                        <rect key="frame" x="10" y="140" width="80" height="80"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="player-green" translatesAutoresizingMaskIntoConstraints="NO" id="w1o-rG-qbE">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <animations/>
+                                            </imageView>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="9fE-Pl-1L0"/>
+                                            <constraint firstAttribute="height" constant="80" id="CvK-d4-jd3"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gex-mL-Ew6">
+                                        <rect key="frame" x="240" y="140" width="80" height="80"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="player-purple" translatesAutoresizingMaskIntoConstraints="NO" id="VKj-2h-03y">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <animations/>
+                                            </imageView>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="0rw-Ki-S4o"/>
+                                            <constraint firstAttribute="height" constant="80" id="hw6-hu-0Rj"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUo-Ll-LyP">
+                                        <rect key="frame" x="470" y="140" width="80" height="80"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="player-overlord" translatesAutoresizingMaskIntoConstraints="NO" id="YIX-yc-38p">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <animations/>
+                                            </imageView>
+                                        </subviews>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="TPG-J0-HQU"/>
+                                            <constraint firstAttribute="height" constant="80" id="x73-0h-iI7"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <animations/>
                                 <constraints>
+                                    <constraint firstItem="k06-OY-Wou" firstAttribute="leading" secondItem="Zv0-c0-wjS" secondAttribute="leading" constant="10" id="Cxu-if-Ttx"/>
                                     <constraint firstItem="aar-Se-peV" firstAttribute="top" secondItem="Zv0-c0-wjS" secondAttribute="top" constant="40" id="HH3-kC-yJB"/>
                                     <constraint firstItem="qgm-Zw-yOe" firstAttribute="top" secondItem="Zv0-c0-wjS" secondAttribute="top" constant="8" id="MMi-Hp-SMw"/>
+                                    <constraint firstItem="Gex-mL-Ew6" firstAttribute="centerX" secondItem="Zv0-c0-wjS" secondAttribute="centerX" id="P5x-Px-mVT"/>
                                     <constraint firstItem="iaG-cY-fsg" firstAttribute="top" secondItem="Zv0-c0-wjS" secondAttribute="top" constant="40" id="PVA-lB-ldY"/>
                                     <constraint firstAttribute="trailing" secondItem="iaG-cY-fsg" secondAttribute="trailing" constant="10" id="Q9u-h9-LfU"/>
+                                    <constraint firstAttribute="trailing" secondItem="NUo-Ll-LyP" secondAttribute="trailing" constant="10" id="TOG-VP-pbV"/>
+                                    <constraint firstItem="NUo-Ll-LyP" firstAttribute="top" secondItem="iaG-cY-fsg" secondAttribute="bottom" constant="20" id="VWY-An-Orj"/>
+                                    <constraint firstItem="Gex-mL-Ew6" firstAttribute="top" secondItem="Bb9-ar-yYU" secondAttribute="bottom" constant="20" id="Wc3-RE-7v7"/>
                                     <constraint firstItem="aar-Se-peV" firstAttribute="leading" secondItem="Zv0-c0-wjS" secondAttribute="leading" constant="10" id="X2C-o3-SmH"/>
+                                    <constraint firstItem="k06-OY-Wou" firstAttribute="top" secondItem="aar-Se-peV" secondAttribute="bottom" constant="20" id="Y6x-HT-zGg"/>
                                     <constraint firstItem="Bb9-ar-yYU" firstAttribute="top" secondItem="qgm-Zw-yOe" secondAttribute="bottom" constant="13" id="b2K-lh-aiX"/>
                                     <constraint firstItem="Bb9-ar-yYU" firstAttribute="centerX" secondItem="Zv0-c0-wjS" secondAttribute="centerX" id="jXW-s4-OlS"/>
                                     <constraint firstItem="qgm-Zw-yOe" firstAttribute="centerX" secondItem="Zv0-c0-wjS" secondAttribute="centerX" id="oGq-j5-P1P"/>
@@ -146,6 +194,9 @@
     <resources>
         <image name="bg" width="320" height="568"/>
         <image name="player-blue" width="88" height="88"/>
+        <image name="player-green" width="88" height="88"/>
+        <image name="player-overlord" width="88" height="86"/>
+        <image name="player-purple" width="88" height="88"/>
         <image name="player-red" width="88" height="88"/>
         <image name="player-yellow" width="88" height="88"/>
         <image name="settings-button" width="98" height="100"/>
