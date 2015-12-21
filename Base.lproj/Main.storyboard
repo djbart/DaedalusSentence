@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -26,18 +26,15 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="673-eb-dGa">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <animations/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Tj-zu-RsO">
                                 <rect key="frame" x="490" y="20" width="90" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAG-Mb-rSs">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
-                                        <animations/>
                                         <state key="normal" image="settings-button"/>
                                     </button>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="LP1-4d-24k"/>
                                     <constraint firstItem="xAG-Mb-rSs" firstAttribute="top" secondItem="0Tj-zu-RsO" secondAttribute="top" id="Q1O-7q-XxL"/>
@@ -51,8 +48,7 @@
                                 <rect key="frame" x="20" y="110" width="560" height="220"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select players" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgm-Zw-yOe">
-                                        <rect key="frame" x="222" y="8" width="117" height="18.5"/>
-                                        <animations/>
+                                        <rect key="frame" x="222" y="8" width="117" height="19"/>
                                         <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="20"/>
                                         <color key="textColor" red="0.40784313725490196" green="0.75686274509803919" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -62,21 +58,17 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player-red" translatesAutoresizingMaskIntoConstraints="NO" id="aOK-fd-R4H">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <animations/>
                                             </imageView>
                                             <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="player-selected" translatesAutoresizingMaskIntoConstraints="NO" id="BND-pv-oBH">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <animations/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7i-it-cjs">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <animations/>
                                                 <connections>
                                                     <action selector="PlayerRedButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gbo-Il-Hzz"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="0yZ-ZT-Hjv"/>
                                             <constraint firstItem="aOK-fd-R4H" firstAttribute="top" secondItem="aar-Se-peV" secondAttribute="top" id="JF3-aH-E4I"/>
@@ -87,25 +79,21 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bb9-ar-yYU">
-                                        <rect key="frame" x="240" y="39.5" width="80" height="80"/>
+                                        <rect key="frame" x="240" y="40" width="80" height="80"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player-yellow" translatesAutoresizingMaskIntoConstraints="NO" id="chL-n8-N5a">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <animations/>
                                             </imageView>
                                             <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="player-selected" translatesAutoresizingMaskIntoConstraints="NO" id="QiL-CD-zhL">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <animations/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppX-65-dKI">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <animations/>
                                                 <connections>
                                                     <action selector="PlayerYellowButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b5G-lY-9iv"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="NrD-yM-3yL"/>
                                             <constraint firstAttribute="bottom" secondItem="chL-n8-N5a" secondAttribute="bottom" id="T7j-HF-zWo"/>
@@ -120,21 +108,17 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player-blue" translatesAutoresizingMaskIntoConstraints="NO" id="J6s-re-XTM">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <animations/>
                                             </imageView>
                                             <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="player-selected" translatesAutoresizingMaskIntoConstraints="NO" id="88c-yd-5lt">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <animations/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkN-iQ-EIz">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <animations/>
                                                 <connections>
                                                     <action selector="PlayerBlueButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="inu-ii-jCg"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="3hz-Fl-UXI"/>
                                             <constraint firstAttribute="width" constant="80" id="6yi-u8-RxB"/>
@@ -149,21 +133,17 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player-green" translatesAutoresizingMaskIntoConstraints="NO" id="w1o-rG-qbE">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <animations/>
                                             </imageView>
                                             <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="player-selected" translatesAutoresizingMaskIntoConstraints="NO" id="62w-bu-YhT">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <animations/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOu-kU-VQi">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <animations/>
                                                 <connections>
                                                     <action selector="PlayerGreenButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TpK-CR-Bqq"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="9fE-Pl-1L0"/>
                                             <constraint firstAttribute="height" constant="80" id="CvK-d4-jd3"/>
@@ -174,25 +154,21 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gex-mL-Ew6">
-                                        <rect key="frame" x="240" y="139.5" width="80" height="80"/>
+                                        <rect key="frame" x="240" y="140" width="80" height="80"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player-purple" translatesAutoresizingMaskIntoConstraints="NO" id="VKj-2h-03y">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <animations/>
                                             </imageView>
                                             <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="player-selected" translatesAutoresizingMaskIntoConstraints="NO" id="cXB-bV-hXd">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <animations/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Art-xt-U1I">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <animations/>
                                                 <connections>
                                                     <action selector="PlayerPurpleButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pXB-fU-Cw7"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="0rw-Ki-S4o"/>
                                             <constraint firstItem="VKj-2h-03y" firstAttribute="top" secondItem="Gex-mL-Ew6" secondAttribute="top" id="IYB-cb-f3S"/>
@@ -207,21 +183,17 @@
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player-overlord" translatesAutoresizingMaskIntoConstraints="NO" id="YIX-yc-38p">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <animations/>
                                             </imageView>
                                             <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="player-selected" translatesAutoresizingMaskIntoConstraints="NO" id="VOF-2O-wRV">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <animations/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gnq-Tz-hyP">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <animations/>
                                                 <connections>
                                                     <action selector="PlayerOverlordButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fdu-4x-kGn"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstItem="YIX-yc-38p" firstAttribute="top" secondItem="NUo-Ll-LyP" secondAttribute="top" id="7La-CI-Nnp"/>
                                             <constraint firstItem="YIX-yc-38p" firstAttribute="leading" secondItem="NUo-Ll-LyP" secondAttribute="leading" id="7p9-RN-Fyo"/>
@@ -232,7 +204,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstItem="k06-OY-Wou" firstAttribute="leading" secondItem="Zv0-c0-wjS" secondAttribute="leading" constant="10" id="Cxu-if-Ttx"/>
                                     <constraint firstItem="aar-Se-peV" firstAttribute="top" secondItem="Zv0-c0-wjS" secondAttribute="top" constant="40" id="HH3-kC-yJB"/>
@@ -255,50 +226,29 @@
                                 <rect key="frame" x="20" y="330" width="560" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="coop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWM-HQ-gIo">
-                                        <rect key="frame" x="262" y="8" width="36" height="16"/>
-                                        <animations/>
+                                        <rect key="frame" x="262" y="7" width="37" height="16"/>
                                         <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="17"/>
                                         <color key="textColor" red="0.40784313725490196" green="0.75686274509803919" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="AlA-s6-e8T"/>
                                     <constraint firstItem="tWM-HQ-gIo" firstAttribute="centerX" secondItem="fni-TU-CD0" secondAttribute="centerX" id="S3Y-JO-kDm"/>
                                     <constraint firstItem="tWM-HQ-gIo" firstAttribute="centerY" secondItem="fni-TU-CD0" secondAttribute="centerY" id="trK-Jx-Kq7"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1N-ST-9co">
-                                <rect key="frame" x="20" y="540" width="560" height="40"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer-bg" translatesAutoresizingMaskIntoConstraints="NO" id="Axi-Kt-bRi">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="40"/>
-                                        <animations/>
-                                    </imageView>
-                                </subviews>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Axi-Kt-bRi" secondAttribute="trailing" id="12G-cm-0mJ"/>
-                                    <constraint firstItem="Axi-Kt-bRi" firstAttribute="leading" secondItem="c1N-ST-9co" secondAttribute="leading" id="2Uj-MS-O4O"/>
-                                    <constraint firstItem="Axi-Kt-bRi" firstAttribute="top" secondItem="c1N-ST-9co" secondAttribute="top" id="XkT-G5-na6"/>
-                                    <constraint firstAttribute="height" constant="40" id="eS3-V2-Rip"/>
-                                    <constraint firstAttribute="bottom" secondItem="Axi-Kt-bRi" secondAttribute="bottom" id="jFc-3K-OIK"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsI-5W-qCT">
-                                <rect key="frame" x="20" y="492" width="560" height="40"/>
+                                <rect key="frame" x="20" y="540" width="560" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4z-SC-Nu3">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="40"/>
-                                        <animations/>
                                         <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="26"/>
                                         <state key="normal" title="Start game">
                                             <color key="titleColor" red="0.40784313725490196" green="0.75686274509803919" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="s4z-SC-Nu3" secondAttribute="bottom" id="25u-0U-jJd"/>
                                     <constraint firstAttribute="trailing" secondItem="s4z-SC-Nu3" secondAttribute="trailing" id="c49-JZ-nx9"/>
@@ -308,23 +258,19 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="c1N-ST-9co" firstAttribute="top" secondItem="bsI-5W-qCT" secondAttribute="bottom" constant="8" id="1Tn-my-D9w"/>
                             <constraint firstItem="fni-TU-CD0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1dU-O2-7lw"/>
                             <constraint firstItem="0Tj-zu-RsO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7qB-FA-x5I"/>
                             <constraint firstItem="Zv0-c0-wjS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FoP-3Y-c6c"/>
-                            <constraint firstItem="c1N-ST-9co" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JKy-8J-0zu"/>
                             <constraint firstItem="bsI-5W-qCT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="L2g-Fq-Zxt"/>
                             <constraint firstItem="bsI-5W-qCT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LYL-O6-sYz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="673-eb-dGa" secondAttribute="trailing" constant="-20" id="O13-nR-3ui"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="c1N-ST-9co" secondAttribute="bottom" constant="20" id="PmD-MX-F6V"/>
                             <constraint firstItem="673-eb-dGa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Rd9-ql-TIT"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="673-eb-dGa" secondAttribute="bottom" id="RoZ-OS-Ga3"/>
                             <constraint firstItem="0Tj-zu-RsO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WB0-7B-PNa"/>
                             <constraint firstItem="0Tj-zu-RsO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="a6A-H8-JcL"/>
-                            <constraint firstItem="c1N-ST-9co" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eUx-Pu-dcR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bsI-5W-qCT" secondAttribute="bottom" constant="20" id="oXw-KC-1vu"/>
                             <constraint firstItem="fni-TU-CD0" firstAttribute="top" secondItem="Zv0-c0-wjS" secondAttribute="bottom" id="qFx-Dw-tc7"/>
                             <constraint firstItem="673-eb-dGa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="qGs-BM-MAg"/>
                             <constraint firstItem="Zv0-c0-wjS" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qQZ-FJ-uH0"/>
@@ -371,6 +317,5 @@
         <image name="player-selected" width="88" height="88"/>
         <image name="player-yellow" width="88" height="88"/>
         <image name="settings-button" width="98" height="100"/>
-        <image name="timer-bg" width="320" height="90"/>
     </resources>
 </document>

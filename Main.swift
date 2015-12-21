@@ -12,7 +12,6 @@ class Main: UIViewController {
     
     let deselectedAplhaValue: CGFloat = 0.5
     
-    
     @IBOutlet weak var PlayerRedAvatarImageView: UIImageView!
     @IBOutlet weak var PlayerRedSelectedImageView: UIImageView!
     var PlayerRedSelected = false
