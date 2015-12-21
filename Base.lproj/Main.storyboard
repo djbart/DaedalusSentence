@@ -15,7 +15,7 @@
         <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="Main" customModule="DaedalusSentence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="BYZ-38-t0r" customClass="Main" customModule="DaedalusSentence" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -33,6 +33,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAG-Mb-rSs">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                         <state key="normal" image="settings-button"/>
+                                        <connections>
+                                            <segue destination="9RU-gG-nPT" kind="show" id="Qgl-ac-zBY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -247,6 +250,9 @@
                                         <state key="normal" title="Start game">
                                             <color key="titleColor" red="0.40784313725490196" green="0.75686274509803919" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Tm4-w6-bCU" kind="show" id="JBp-jb-s3g"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -304,7 +310,103 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="242" y="424"/>
+            <point key="canvasLocation" x="92" y="77"/>
+        </scene>
+        <!--Play-->
+        <scene sceneID="HCp-tL-jWP">
+            <objects>
+                <viewController id="Tm4-w6-bCU" customClass="Play" customModule="DaedalusSentence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ug2-fL-5uu"/>
+                        <viewControllerLayoutGuide type="bottom" id="C4p-j8-2ZB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dgX-QL-Ddx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="WPO-NF-MEh">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="db9-Ia-Pok">
+                                <rect key="frame" x="20" y="20" width="560" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gu-tD-dHg">
+                                        <rect key="frame" x="245" y="0.0" width="71" height="30"/>
+                                        <state key="normal" title="Quit game"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="etG-9C-mLD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3ZY-T6-Xf4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="WPO-NF-MEh" secondAttribute="trailing" constant="-20" id="3fw-A8-cfU"/>
+                            <constraint firstItem="db9-Ia-Pok" firstAttribute="leading" secondItem="dgX-QL-Ddx" secondAttribute="leadingMargin" id="4Eu-3f-ZMp"/>
+                            <constraint firstItem="WPO-NF-MEh" firstAttribute="leading" secondItem="dgX-QL-Ddx" secondAttribute="leadingMargin" constant="-20" id="O6z-7M-TMF"/>
+                            <constraint firstItem="WPO-NF-MEh" firstAttribute="top" secondItem="dgX-QL-Ddx" secondAttribute="topMargin" id="USR-lt-FMI"/>
+                            <constraint firstItem="C4p-j8-2ZB" firstAttribute="top" secondItem="WPO-NF-MEh" secondAttribute="bottom" id="WxQ-VH-4hY"/>
+                            <constraint firstItem="db9-Ia-Pok" firstAttribute="top" secondItem="ug2-fL-5uu" secondAttribute="bottom" id="nlo-vD-ZB9"/>
+                            <constraint firstItem="db9-Ia-Pok" firstAttribute="trailing" secondItem="dgX-QL-Ddx" secondAttribute="trailingMargin" id="qfr-T8-EAL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4aQ-aH-4u7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92" y="774"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="gMZ-Ts-PM9">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" id="9RU-gG-nPT" customClass="Settings" customModule="DaedalusSentence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sSG-4P-Bk2"/>
+                        <viewControllerLayoutGuide type="bottom" id="DiZ-el-FKM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xxb-ZB-ceQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="J7A-7Z-CHc">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DJV-5P-XJf">
+                                <rect key="frame" x="20" y="20" width="560" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXG-dm-jnp">
+                                        <rect key="frame" x="257" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="Back"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="j44-QV-171"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ql7-nA-8mj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J7A-7Z-CHc" firstAttribute="leading" secondItem="xxb-ZB-ceQ" secondAttribute="leadingMargin" constant="-20" id="6cO-Ur-TK3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J7A-7Z-CHc" secondAttribute="trailing" constant="-20" id="K5k-UZ-y3g"/>
+                            <constraint firstItem="J7A-7Z-CHc" firstAttribute="top" secondItem="xxb-ZB-ceQ" secondAttribute="topMargin" id="L4d-ke-CXE"/>
+                            <constraint firstItem="DJV-5P-XJf" firstAttribute="trailing" secondItem="xxb-ZB-ceQ" secondAttribute="trailingMargin" id="QPY-WM-Qx8"/>
+                            <constraint firstItem="DJV-5P-XJf" firstAttribute="leading" secondItem="xxb-ZB-ceQ" secondAttribute="leadingMargin" id="T1f-ii-f5C"/>
+                            <constraint firstItem="DiZ-el-FKM" firstAttribute="top" secondItem="J7A-7Z-CHc" secondAttribute="bottom" id="pet-kt-Xxx"/>
+                            <constraint firstItem="DJV-5P-XJf" firstAttribute="top" secondItem="sSG-4P-Bk2" secondAttribute="bottom" id="ryy-XL-lsU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PiW-u5-fQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782" y="77"/>
         </scene>
     </scenes>
     <resources>
@@ -318,4 +420,7 @@
         <image name="player-yellow" width="88" height="88"/>
         <image name="settings-button" width="98" height="100"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="j44-QV-171"/>
+    </inferredMetricsTieBreakers>
 </document>
