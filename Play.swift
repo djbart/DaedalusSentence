@@ -37,7 +37,14 @@ class Play: UIViewController {
         dieTimerValue = RollDie()
         let imageName = String(format: "die_timer_%d", dieTimerValue)
         dieTimerImageView.image = UIImage(named: imageName)
-
+    }
+    
+    @IBOutlet weak var dieTheseusImageView: UIImageView!
+    var dieTheseusValue = 1;
+    @IBAction func dieTheseusTouch(sender: AnyObject) {
+        dieTheseusValue = RollDie()
+        let imageName = String(format: "die_theseus_%d", dieTheseusValue)
+        dieTheseusImageView.image = UIImage(named: imageName)
     }
     
     
