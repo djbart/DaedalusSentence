@@ -9,28 +9,92 @@
 import UIKit
 
 class Play: UIViewController {
+    
+    let app = UIApplication.sharedApplication().delegate as! AppDelegate
 
     @IBOutlet weak var gameTimerLabel: UILabel!
-    var startTime = NSTimeInterval()
-    let gameTimerInSeconds = 3600;
-    var timer = NSTimer()
+    var gameTimerStart = NSTimeInterval()
+    var gameTimer = NSTimer()
+    
+    
+    @IBOutlet weak var roundTimerLabel: UILabel!
+    @IBOutlet weak var startRoundButton: UIButton!
+    var roundTimerStart = NSTimeInterval()
+    var roundTimer = NSTimer()
+    var startRoundText = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        startTime = NSDate.timeIntervalSinceReferenceDate()
-        updateTime()
+        initializeGameTimer()
         
-        let aSelector : Selector = "updateTime"
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: aSelector, userInfo: nil, repeats: true)
+        startRoundButton.setTitle(String(format: "Start Round %d", app.currentRoundNumber), forState: UIControlState.Normal)
     }
     
-    func updateTime() {
+    @IBAction func startRoundButton(sender: AnyObject) {
+        if (startRoundText == true)
+        {
+            startRound()
+        }
+        else
+        {
+            finishRound()
+        }
+    }
+    
+    func startRound(){
+        startRoundButton.setTitle(String(format: "End Round %d", app.currentRoundNumber), forState: UIControlState.Normal)
+        
+        initializeRoundTimer()
+        startRoundText = false
+    }
+    
+    func finishRound() {
+        roundTimer.invalidate()
+        
+        app.currentRoundNumber++
+        startRoundButton.setTitle(String(format: "Start Round %d", app.currentRoundNumber), forState: UIControlState.Normal)
+        
+        roundTimerLabel.text = String(format: "%02d", app.defaultRoundTime)
+        startRoundText = true
+    }
+    
+    func initializeRoundTimer() {
+        roundTimerStart = NSDate.timeIntervalSinceReferenceDate()
+        updateRoundTime()
+    
+        let aSelector : Selector = "updateRoundTime"
+        roundTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: aSelector, userInfo: nil, repeats: true)
+    }
+    
+    func initializeGameTimer() {
+        gameTimerStart = NSDate.timeIntervalSinceReferenceDate()
+        updateGameTime()
+        
+        let aSelector : Selector = "updateGameTime"
+        gameTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: aSelector, userInfo: nil, repeats: true)
+    }
+    
+    func updateRoundTime() {
         let currentTime = NSDate.timeIntervalSinceReferenceDate()
         
-        let elapsedTime: NSTimeInterval = currentTime - startTime
-        let gameTimerInSecondsRemaining = gameTimerInSeconds - Int(round(elapsedTime))
+        let elapsedTime: NSTimeInterval = currentTime - roundTimerStart
+        let roundTimerInSecondsRemaining = app.defaultRoundTime - Int(round(elapsedTime))
+        
+        let strSeconds = String(format: "%02d", roundTimerInSecondsRemaining)
+        roundTimerLabel.text = "\(strSeconds)"
+        
+        if (roundTimerInSecondsRemaining == 0)
+        {
+            finishRound()
+        }
+    }
+    
+    func updateGameTime() {
+        let currentTime = NSDate.timeIntervalSinceReferenceDate()
+        
+        let elapsedTime: NSTimeInterval = currentTime - gameTimerStart
+        let gameTimerInSecondsRemaining = app.gameTimerInSeconds - Int(round(elapsedTime))
         
         let hours = UInt8(gameTimerInSecondsRemaining / 3600)
         let minutes = UInt8(gameTimerInSecondsRemaining % 3600 / 60)

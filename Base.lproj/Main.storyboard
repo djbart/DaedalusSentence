@@ -10,6 +10,8 @@
             <string>Libertad</string>
             <string>Libertad</string>
             <string>Libertad</string>
+            <string>Libertad</string>
+            <string>Libertad</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -307,6 +309,7 @@
                         <outlet property="PlayerRedSelectedImageView" destination="BND-pv-oBH" id="YdQ-7I-5GP"/>
                         <outlet property="PlayerYellowAvatarImageView" destination="chL-n8-N5a" id="oLE-sD-dDA"/>
                         <outlet property="PlayerYellowSelectedImageView" destination="QiL-CD-zhL" id="wHj-AV-9U6"/>
+                        <outlet property="startGameButton" destination="s4z-SC-Nu3" id="nwI-Vz-zwx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -347,8 +350,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYn-WA-Mf9">
                                 <rect key="frame" x="20" y="520" width="560" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fn0-Nd-ghx">
-                                        <rect key="frame" x="8" y="8" width="544" height="44"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fn0-Nd-ghx">
+                                        <rect key="frame" x="196" y="12" width="169" height="37"/>
                                         <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -360,13 +363,73 @@
                                     <constraint firstAttribute="height" constant="60" id="TiC-EJ-3BF"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xaF-eV-47V">
+                                <rect key="frame" x="20" y="432" width="560" height="80"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KnP-0E-Dyo">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56c-GG-bOw">
+                                                <rect key="frame" x="89" y="25" width="102" height="31"/>
+                                                <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="20"/>
+                                                <state key="normal" title="Start Round"/>
+                                                <connections>
+                                                    <action selector="startRoundButton:" destination="Tm4-w6-bCU" eventType="touchUpInside" id="eqe-t4-PS9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="56c-GG-bOw" firstAttribute="centerY" secondItem="KnP-0E-Dyo" secondAttribute="centerY" id="KkE-zH-ax0"/>
+                                            <constraint firstItem="56c-GG-bOw" firstAttribute="centerX" secondItem="KnP-0E-Dyo" secondAttribute="centerX" id="L54-za-lGp"/>
+                                            <constraint firstAttribute="width" constant="280" id="o4n-MI-ozn"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yw3-bU-Prr">
+                                        <rect key="frame" x="280" y="0.0" width="280" height="80"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gm1-aa-gkk">
+                                                <rect key="frame" x="129" y="31" width="23" height="19"/>
+                                                <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="20"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Gm1-aa-gkk" firstAttribute="centerX" secondItem="Yw3-bU-Prr" secondAttribute="centerX" id="JzD-To-9o2"/>
+                                            <constraint firstItem="Gm1-aa-gkk" firstAttribute="centerY" secondItem="Yw3-bU-Prr" secondAttribute="centerY" id="aZ0-Sq-3gf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Yw3-bU-Prr" firstAttribute="leading" secondItem="xaF-eV-47V" secondAttribute="leading" constant="280" id="63O-4c-YmK"/>
+                                    <constraint firstItem="KnP-0E-Dyo" firstAttribute="leading" secondItem="xaF-eV-47V" secondAttribute="leading" id="BQ0-Wf-4gQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="KnP-0E-Dyo" secondAttribute="bottom" id="G0o-Ip-FVF"/>
+                                    <constraint firstItem="Yw3-bU-Prr" firstAttribute="leading" secondItem="KnP-0E-Dyo" secondAttribute="trailing" id="N3C-Em-db7"/>
+                                    <constraint firstAttribute="height" constant="80" id="U8b-sZ-pXP"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yw3-bU-Prr" secondAttribute="trailing" id="VCU-n2-i0A"/>
+                                    <constraint firstItem="Yw3-bU-Prr" firstAttribute="top" secondItem="KnP-0E-Dyo" secondAttribute="top" id="bU0-yg-etz"/>
+                                    <constraint firstItem="KnP-0E-Dyo" firstAttribute="top" secondItem="xaF-eV-47V" secondAttribute="top" id="etf-BC-P2O"/>
+                                    <constraint firstItem="Yw3-bU-Prr" firstAttribute="bottom" secondItem="KnP-0E-Dyo" secondAttribute="bottom" id="l8p-aO-G2d"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="63O-4c-YmK"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NYn-WA-Mf9" firstAttribute="trailing" secondItem="dgX-QL-Ddx" secondAttribute="trailingMargin" id="2d9-Gx-R1Q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WPO-NF-MEh" secondAttribute="trailing" constant="-20" id="3fw-A8-cfU"/>
                             <constraint firstItem="db9-Ia-Pok" firstAttribute="leading" secondItem="dgX-QL-Ddx" secondAttribute="leadingMargin" id="4Eu-3f-ZMp"/>
+                            <constraint firstItem="xaF-eV-47V" firstAttribute="leading" secondItem="dgX-QL-Ddx" secondAttribute="leadingMargin" id="84x-UY-f3T"/>
                             <constraint firstItem="WPO-NF-MEh" firstAttribute="leading" secondItem="dgX-QL-Ddx" secondAttribute="leadingMargin" constant="-20" id="O6z-7M-TMF"/>
+                            <constraint firstItem="NYn-WA-Mf9" firstAttribute="top" secondItem="xaF-eV-47V" secondAttribute="bottom" constant="8" id="QC5-zC-h5l"/>
+                            <constraint firstItem="xaF-eV-47V" firstAttribute="trailing" secondItem="dgX-QL-Ddx" secondAttribute="trailingMargin" id="SMQ-IV-C5p"/>
                             <constraint firstItem="NYn-WA-Mf9" firstAttribute="leading" secondItem="dgX-QL-Ddx" secondAttribute="leadingMargin" id="TmH-Dm-adm"/>
                             <constraint firstItem="WPO-NF-MEh" firstAttribute="top" secondItem="dgX-QL-Ddx" secondAttribute="topMargin" id="USR-lt-FMI"/>
                             <constraint firstItem="C4p-j8-2ZB" firstAttribute="top" secondItem="WPO-NF-MEh" secondAttribute="bottom" id="WxQ-VH-4hY"/>
@@ -377,6 +440,8 @@
                     </view>
                     <connections>
                         <outlet property="GameTimerLabel" destination="fn0-Nd-ghx" id="i85-63-3j6"/>
+                        <outlet property="roundTimerLabel" destination="Gm1-aa-gkk" id="EEi-8E-aeA"/>
+                        <outlet property="startRoundButton" destination="56c-GG-bOw" id="pzI-fm-Dlu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aQ-aH-4u7" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -13,6 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    //General settings
+    var currentRoundNumber = 1
+    let defaultGameTime = 3600
+    let defaultRoundTime = 5
+    
+    //Game timer settings
+    var gameTimerInSeconds = 3600
+    var useGameTimer = true
+    
     //Player selection
     var PlayerRedSelected = false
     var PlayerYellowSelected = false

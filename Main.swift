@@ -13,6 +13,7 @@ class Main: UIViewController {
     let deselectedAplhaValue: CGFloat = 0.5
     let app = UIApplication.sharedApplication().delegate as! AppDelegate
     
+    @IBOutlet weak var startGameButton: UIButton!
     @IBOutlet weak var PlayerRedAvatarImageView: UIImageView!
     @IBOutlet weak var PlayerRedSelectedImageView: UIImageView!
     
@@ -54,6 +55,10 @@ class Main: UIViewController {
     
     @IBAction func PlayerOverlordButtonTouched(sender: UIButton) {
         SwitchPlayerSelection(&PlayerOverlordAvatarImageView, selection: &PlayerOverlordSelectedImageView, selected: &app.PlayerOverlordSelected)
+    }
+    
+    @IBAction func startGameButton(sender: UIButton) {
+        app.currentRoundNumber = 1;
     }
     
     
