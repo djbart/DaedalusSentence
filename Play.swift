@@ -37,6 +37,10 @@ class Play: UIViewController {
         dieTimerValue = RollDie()
         let imageName = String(format: "die_timer_%d", dieTimerValue)
         dieTimerImageView.image = UIImage(named: imageName)
+        
+        app.currentRoundTime = 5 * dieTimerValue + 10
+        let strSeconds = String(format: "%02d", app.currentRoundTime)
+        roundTimerLabel.text = "\(strSeconds)"
     }
     
     @IBOutlet weak var dieTheseusImageView: UIImageView!
@@ -55,9 +59,7 @@ class Play: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        initializeGameTimer()
-        
-        startRoundButton.setTitle(String(format: "Start Round %d", app.currentRoundNumber), forState: UIControlState.Normal)
+        startGame()
     }
     
     @IBAction func startRoundButton(sender: AnyObject) {
@@ -69,6 +71,16 @@ class Play: UIViewController {
         {
             finishRound()
         }
+    }
+    
+    func startGame(){
+        initializeGameTimer()
+        
+        startRoundButton.setTitle(String(format: "Start Round %d", app.currentRoundNumber), forState: UIControlState.Normal)
+        
+        app.currentRoundTime = 5 * dieTimerValue + 10
+        let strSeconds = String(format: "%02d", app.currentRoundTime)
+        roundTimerLabel.text = "\(strSeconds)"
     }
     
     func startRound(){
@@ -108,7 +120,7 @@ class Play: UIViewController {
         let currentTime = NSDate.timeIntervalSinceReferenceDate()
         
         let elapsedTime: NSTimeInterval = currentTime - roundTimerStart
-        let roundTimerInSecondsRemaining = app.defaultRoundTime - Int(round(elapsedTime))
+        let roundTimerInSecondsRemaining = app.currentRoundTime - Int(round(elapsedTime))
         
         let strSeconds = String(format: "%02d", roundTimerInSecondsRemaining)
         roundTimerLabel.text = "\(strSeconds)"

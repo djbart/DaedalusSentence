@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var currentRoundNumber = 1
     let defaultGameTime = 3600
     let defaultRoundTime = 5
+    var currentRoundTime = 5
     
     //Game timer settings
     var gameTimerInSeconds = 3600
