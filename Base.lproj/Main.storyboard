@@ -425,6 +425,17 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxa-cz-U0y">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="die_special_1" translatesAutoresizingMaskIntoConstraints="NO" id="trA-RR-hCg">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15s-DP-oo8">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <connections>
+                                                    <action selector="dieSpecialTouch:" destination="Tm4-w6-bCU" eventType="touchUpInside" id="myb-LO-qWU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="J2b-8L-23P"/>
@@ -487,6 +498,7 @@
                     </view>
                     <connections>
                         <outlet property="GameTimerLabel" destination="fn0-Nd-ghx" id="i85-63-3j6"/>
+                        <outlet property="dieSpecialImageView" destination="trA-RR-hCg" id="3Ta-hm-ncY"/>
                         <outlet property="roundTimerLabel" destination="Gm1-aa-gkk" id="EEi-8E-aeA"/>
                         <outlet property="startRoundButton" destination="56c-GG-bOw" id="pzI-fm-Dlu"/>
                     </connections>
@@ -546,6 +558,7 @@
     </scenes>
     <resources>
         <image name="bg" width="320" height="568"/>
+        <image name="die_special_1" width="80" height="80"/>
         <image name="player-blue" width="88" height="88"/>
         <image name="player-green" width="88" height="88"/>
         <image name="player-overlord" width="88" height="86"/>

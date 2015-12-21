@@ -23,6 +23,20 @@ class Play: UIViewController {
     var roundTimer = NSTimer()
     var startRoundText = true
     
+    @IBOutlet weak var dieSpecialImageView: UIImageView!
+    var dieSpecialValue = 1;
+    
+    @IBAction func dieSpecialTouch(sender: AnyObject) {
+        
+        dieSpecialValue = RollDie()
+        let imageName = String(format: "die_special_%d", dieSpecialValue)
+        dieSpecialImageView.image = UIImage(named: imageName)
+    }
+    
+    func RollDie() -> Int {
+        return Int(arc4random() % 6) + 1
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
