@@ -17,9 +17,7 @@ class Play: UIViewController {
     
     @IBOutlet weak var roundTimerLabel: UILabel!
     @IBOutlet weak var startRoundButton: UIButton!
-    var roundTimerStart = NSTimeInterval()
-    var roundTimer = NSTimer()
-    var startRoundText = true
+    var roundTimer: RoundTimer!
     
     @IBOutlet weak var dieSpecialImageView: UIImageView!
     var dieSpecialValue = 1;
@@ -36,9 +34,7 @@ class Play: UIViewController {
         let imageName = String(format: "die_timer_%d", dieTimerValue)
         dieTimerImageView.image = UIImage(named: imageName)
         
-        app.currentRoundTime = 5 * dieTimerValue + 10
-        let strSeconds = String(format: "%02d", app.currentRoundTime)
-        roundTimerLabel.text = "\(strSeconds)"
+        roundTimer.setRoundTime((timeInSeconds: 5 * dieTimerValue + 10))
     }
     
     @IBOutlet weak var dieTheseusImageView: UIImageView!
@@ -57,74 +53,19 @@ class Play: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        startGame()
+        gameTimer = GameTimer.init(label: gameTimerLabel)
+        gameTimer.start()
+        
+        roundTimer = RoundTimer.init(label: roundTimerLabel, button: startRoundButton)
+        roundTimer.setRoundTime((timeInSeconds: 5 * dieTimerValue + 10))
     }
     
     @IBAction func startRoundButton(sender: AnyObject) {
-        if (startRoundText == true)
-        {
-            startRound()
-        }
-        else
-        {
-            finishRound()
-        }
-    }
-    
-    func startGame(){
-        gameTimer = GameTimer.init(label: gameTimerLabel)
-        gameTimer.initializeGameTimer()
-        
-        startRoundButton.setTitle(String(format: "Start Round %d", app.currentRoundNumber), forState: UIControlState.Normal)
-        
-        app.currentRoundTime = 5 * dieTimerValue + 10
-        let strSeconds = String(format: "%02d", app.currentRoundTime)
-        roundTimerLabel.text = "\(strSeconds)"
-    }
-    
-    func startRound(){
-        startRoundButton.setTitle(String(format: "End Round %d", app.currentRoundNumber), forState: UIControlState.Normal)
-        
-        initializeRoundTimer()
-        startRoundText = false
-    }
-    
-    func finishRound() {
-        roundTimer.invalidate()
-        
-        app.currentRoundNumber++
-        startRoundButton.setTitle(String(format: "Start Round %d", app.currentRoundNumber), forState: UIControlState.Normal)
-        
-        roundTimerLabel.text = String(format: "%02d", app.defaultRoundTime)
-        startRoundText = true
-    }
-    
-    func initializeRoundTimer() {
-        roundTimerStart = NSDate.timeIntervalSinceReferenceDate()
-        updateRoundTime()
-    
-        let aSelector : Selector = "updateRoundTime"
-        roundTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: aSelector, userInfo: nil, repeats: true)
-    }
-    
-    func updateRoundTime() {
-        let currentTime = NSDate.timeIntervalSinceReferenceDate()
-        
-        let elapsedTime: NSTimeInterval = currentTime - roundTimerStart
-        let roundTimerInSecondsRemaining = app.currentRoundTime - Int(round(elapsedTime))
-        
-        let strSeconds = String(format: "%02d", roundTimerInSecondsRemaining)
-        roundTimerLabel.text = "\(strSeconds)"
-        
-        if (roundTimerInSecondsRemaining == 0)
-        {
-            finishRound()
-        }
+        roundTimer.toggleTimer()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
