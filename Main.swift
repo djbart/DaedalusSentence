@@ -14,82 +14,57 @@ class Main: UIViewController {
     let app = UIApplication.sharedApplication().delegate as! AppDelegate
     
     @IBOutlet weak var startGameButton: UIButton!
+    
+    var PlayerRed: Avatar!
     @IBOutlet weak var PlayerRedAvatarImageView: UIImageView!
     @IBOutlet weak var PlayerRedSelectedImageView: UIImageView!
     
+    var PlayerYellow: Avatar!
     @IBOutlet weak var PlayerYellowAvatarImageView: UIImageView!
     @IBOutlet weak var PlayerYellowSelectedImageView: UIImageView!
     
+    var PlayerBlue: Avatar!
     @IBOutlet weak var PlayerBlueAvatarImageView: UIImageView!
     @IBOutlet weak var PlayerBlueSelectedImageView: UIImageView!
     
+    var PlayerGreen: Avatar!
     @IBOutlet weak var PlayerGreenAvatarImageView: UIImageView!
     @IBOutlet weak var PlayerGreenSelectedImageView: UIImageView!
     
+    var PlayerPurple: Avatar!
     @IBOutlet weak var PlayerPurpleAvatarImageView: UIImageView!
     @IBOutlet weak var PlayerPurpleSelectedImageView: UIImageView!
     
+    var PlayerOverlord: Avatar!
     @IBOutlet weak var PlayerOverlordAvatarImageView: UIImageView!
     @IBOutlet weak var PlayerOverlordSelectedImageView: UIImageView!
     
     @IBAction func PlayerRedButtonTouched(sender: UIButton) {
-        SwitchPlayerSelection(&PlayerRedAvatarImageView, selection: &PlayerRedSelectedImageView, selected: &app.PlayerRedSelected)
+        PlayerRed.toggle()
     }
     
     @IBAction func PlayerYellowButtonTouched(sender: UIButton) {
-        SwitchPlayerSelection(&PlayerYellowAvatarImageView, selection: &PlayerYellowSelectedImageView, selected: &app.PlayerYellowSelected)
+        PlayerYellow.toggle()
     }
     
-    
     @IBAction func PlayerBlueButtonTouched(sender: UIButton) {
-        SwitchPlayerSelection(&PlayerBlueAvatarImageView, selection: &PlayerBlueSelectedImageView, selected: &app.PlayerBlueSelected)
+        PlayerBlue.toggle()
     }
     
     @IBAction func PlayerGreenButtonTouched(sender: UIButton) {
-        SwitchPlayerSelection(&PlayerGreenAvatarImageView, selection: &PlayerGreenSelectedImageView, selected: &app.PlayerGreenSelected)
+        PlayerGreen.toggle()
     }
     
     @IBAction func PlayerPurpleButtonTouched(sender: UIButton) {
-        SwitchPlayerSelection(&PlayerPurpleAvatarImageView, selection: &PlayerPurpleSelectedImageView, selected: &app.PlayerPurpleSelected)
+        PlayerPurple.toggle()
     }
     
     @IBAction func PlayerOverlordButtonTouched(sender: UIButton) {
-        SwitchPlayerSelection(&PlayerOverlordAvatarImageView, selection: &PlayerOverlordSelectedImageView, selected: &app.PlayerOverlordSelected)
+        PlayerOverlord.toggle()
     }
     
     @IBAction func startGameButton(sender: UIButton) {
         app.currentRoundNumber = 1;
-    }
-    
-    
-    func SwitchPlayerSelection(inout avatar: UIImageView!, inout selection: UIImageView!, inout selected: Bool)
-    {
-        if (selected == true)
-        {
-            avatar.alpha = deselectedAplhaValue
-            selection.hidden = true
-            selected = false
-        }
-        else
-        {
-            avatar.alpha = 1
-            selection.hidden = false
-            selected = true
-        }
-    }
-    
-    func SetPlayerSelection(inout avatar: UIImageView!, inout selection: UIImageView!, inout selected: Bool)
-    {
-        if (selected == true)
-        {
-            avatar.alpha = 1
-            selection.hidden = false
-        }
-        else
-        {
-            avatar.alpha = deselectedAplhaValue
-            selection.hidden = true
-        }
     }
 
     override func viewDidLoad() {
@@ -100,17 +75,16 @@ class Main: UIViewController {
     
     func InitializePlayerSelection()
     {
-        SetPlayerSelection(&PlayerRedAvatarImageView, selection: &PlayerRedSelectedImageView, selected: &app.PlayerRedSelected)
-        SetPlayerSelection(&PlayerYellowAvatarImageView, selection: &PlayerYellowSelectedImageView, selected: &app.PlayerYellowSelected)
-        SetPlayerSelection(&PlayerBlueAvatarImageView, selection: &PlayerBlueSelectedImageView, selected: &app.PlayerBlueSelected)
-        SetPlayerSelection(&PlayerGreenAvatarImageView, selection: &PlayerGreenSelectedImageView, selected: &app.PlayerGreenSelected)
-        SetPlayerSelection(&PlayerPurpleAvatarImageView, selection: &PlayerPurpleSelectedImageView, selected: &app.PlayerPurpleSelected)
-        SetPlayerSelection(&PlayerOverlordAvatarImageView, selection: &PlayerOverlordSelectedImageView, selected: &app.PlayerOverlordSelected)
+        PlayerRed = Avatar.init(image: PlayerRedAvatarImageView, selection: PlayerRedSelectedImageView, selected: &app.PlayerRedSelected)
+        PlayerYellow = Avatar.init(image: PlayerYellowAvatarImageView, selection: PlayerYellowSelectedImageView, selected: &app.PlayerYellowSelected)
+        PlayerBlue = Avatar.init(image: PlayerBlueAvatarImageView, selection: PlayerBlueSelectedImageView, selected: &app.PlayerBlueSelected)
+        PlayerGreen = Avatar.init(image: PlayerGreenAvatarImageView, selection: PlayerGreenSelectedImageView, selected: &app.PlayerGreenSelected)
+        PlayerPurple = Avatar.init(image: PlayerPurpleAvatarImageView, selection: PlayerPurpleSelectedImageView, selected: &app.PlayerPurpleSelected)
+        PlayerOverlord = Avatar.init(image: PlayerOverlordAvatarImageView, selection: PlayerOverlordSelectedImageView, selected: &app.PlayerOverlordSelected)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
