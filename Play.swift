@@ -19,30 +19,23 @@ class Play: UIViewController {
     @IBOutlet weak var startRoundButton: UIButton!
     var roundTimer: RoundTimer!
     
+    var dieSpecial: Die!
     @IBOutlet weak var dieSpecialImageView: UIImageView!
-    var dieSpecialValue = 1;
     @IBAction func dieSpecialTouch(sender: AnyObject) {
-        dieSpecialValue = RollDie()
-        let imageName = String(format: "die_special_%d", dieSpecialValue)
-        dieSpecialImageView.image = UIImage(named: imageName)
+        dieSpecial.roll()
     }
     
+    var dieTimer: Die!
     @IBOutlet weak var dieTimerImageView: UIImageView!
-    var dieTimerValue = 1;
     @IBAction func dieTimerTouch(sender: AnyObject) {
-        dieTimerValue = RollDie()
-        let imageName = String(format: "die_timer_%d", dieTimerValue)
-        dieTimerImageView.image = UIImage(named: imageName)
-        
-        roundTimer.setRoundTime((timeInSeconds: 5 * dieTimerValue + 10))
+        dieTimer.roll()
+        roundTimer.setRoundTime((timeInSeconds: 5 * dieTimer.value + 10))
     }
     
+    var dieTheseus: Die!
     @IBOutlet weak var dieTheseusImageView: UIImageView!
-    var dieTheseusValue = 1;
     @IBAction func dieTheseusTouch(sender: AnyObject) {
-        dieTheseusValue = RollDie()
-        let imageName = String(format: "die_theseus_%d", dieTheseusValue)
-        dieTheseusImageView.image = UIImage(named: imageName)
+        dieTheseus.roll()
     }
     
     
@@ -52,12 +45,21 @@ class Play: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        dieSpecial = Die.init(image: dieSpecialImageView, imageFileFormat: "die_special_%d")
+        dieSpecial.roll()
+        
+        dieTimer = Die.init(image: dieTimerImageView, imageFileFormat: "die_timer_%d")
+        dieTimer.roll()
+        
+        dieTheseus = Die.init(image: dieTheseusImageView, imageFileFormat: "die_theseus_%d")
+        dieTheseus.roll()
+        
         gameTimer = GameTimer.init(label: gameTimerLabel)
         gameTimer.start()
         
         roundTimer = RoundTimer.init(label: roundTimerLabel, button: startRoundButton)
-        roundTimer.setRoundTime((timeInSeconds: 5 * dieTimerValue + 10))
+        roundTimer.setRoundTime((timeInSeconds: 5 * dieTimer.value + 10))
     }
     
     @IBAction func startRoundButton(sender: AnyObject) {
