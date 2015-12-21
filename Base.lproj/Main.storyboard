@@ -420,6 +420,50 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1IX-LF-Dd8">
+                                <rect key="frame" x="20" y="58" width="560" height="80"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxa-cz-U0y">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="J2b-8L-23P"/>
+                                            <constraint firstAttribute="width" constant="80" id="wTU-4H-jVl"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N97-mG-ntE">
+                                        <rect key="frame" x="240" y="0.0" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="GeG-SA-F7N"/>
+                                            <constraint firstAttribute="height" constant="80" id="XJm-IF-oOC"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOM-l0-Zml">
+                                        <rect key="frame" x="480" y="0.0" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="MgU-1b-tb0"/>
+                                            <constraint firstAttribute="width" constant="80" id="ij4-NL-bzq"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="N97-mG-ntE" firstAttribute="centerX" secondItem="1IX-LF-Dd8" secondAttribute="centerX" id="0Jq-y7-yDn"/>
+                                    <constraint firstAttribute="bottom" secondItem="hxa-cz-U0y" secondAttribute="bottom" id="Az3-Ic-myG"/>
+                                    <constraint firstAttribute="trailing" secondItem="iOM-l0-Zml" secondAttribute="trailing" id="Pc5-2E-Va2"/>
+                                    <constraint firstAttribute="height" constant="80" id="bli-Sh-LCU"/>
+                                    <constraint firstItem="hxa-cz-U0y" firstAttribute="top" secondItem="1IX-LF-Dd8" secondAttribute="top" id="jK3-OP-FVx"/>
+                                    <constraint firstItem="hxa-cz-U0y" firstAttribute="leading" secondItem="1IX-LF-Dd8" secondAttribute="leading" id="kEK-d8-ExF"/>
+                                    <constraint firstItem="N97-mG-ntE" firstAttribute="top" secondItem="1IX-LF-Dd8" secondAttribute="top" id="vpA-kx-gue"/>
+                                    <constraint firstItem="iOM-l0-Zml" firstAttribute="top" secondItem="1IX-LF-Dd8" secondAttribute="top" id="yDP-9g-1dM"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Az3-Ic-myG"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -433,9 +477,12 @@
                             <constraint firstItem="NYn-WA-Mf9" firstAttribute="leading" secondItem="dgX-QL-Ddx" secondAttribute="leadingMargin" id="TmH-Dm-adm"/>
                             <constraint firstItem="WPO-NF-MEh" firstAttribute="top" secondItem="dgX-QL-Ddx" secondAttribute="topMargin" id="USR-lt-FMI"/>
                             <constraint firstItem="C4p-j8-2ZB" firstAttribute="top" secondItem="WPO-NF-MEh" secondAttribute="bottom" id="WxQ-VH-4hY"/>
+                            <constraint firstItem="1IX-LF-Dd8" firstAttribute="top" secondItem="db9-Ia-Pok" secondAttribute="bottom" constant="8" id="daM-YG-e3U"/>
                             <constraint firstItem="C4p-j8-2ZB" firstAttribute="top" secondItem="NYn-WA-Mf9" secondAttribute="bottom" constant="20" id="ld6-au-5lJ"/>
                             <constraint firstItem="db9-Ia-Pok" firstAttribute="top" secondItem="ug2-fL-5uu" secondAttribute="bottom" id="nlo-vD-ZB9"/>
+                            <constraint firstItem="1IX-LF-Dd8" firstAttribute="trailing" secondItem="dgX-QL-Ddx" secondAttribute="trailingMargin" id="ozE-o2-Sr8"/>
                             <constraint firstItem="db9-Ia-Pok" firstAttribute="trailing" secondItem="dgX-QL-Ddx" secondAttribute="trailingMargin" id="qfr-T8-EAL"/>
+                            <constraint firstItem="1IX-LF-Dd8" firstAttribute="leading" secondItem="dgX-QL-Ddx" secondAttribute="leadingMargin" id="zX2-R0-Pss"/>
                         </constraints>
                     </view>
                     <connections>
