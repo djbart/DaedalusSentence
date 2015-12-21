@@ -13,9 +13,7 @@ class Play: UIViewController {
     let app = UIApplication.sharedApplication().delegate as! AppDelegate
 
     @IBOutlet weak var gameTimerLabel: UILabel!
-    var gameTimerStart = NSTimeInterval()
-    var gameTimer = NSTimer()
-    
+    var gameTimer: GameTimer!
     
     @IBOutlet weak var roundTimerLabel: UILabel!
     @IBOutlet weak var startRoundButton: UIButton!
@@ -74,7 +72,8 @@ class Play: UIViewController {
     }
     
     func startGame(){
-        initializeGameTimer()
+        gameTimer = GameTimer.init(label: gameTimerLabel)
+        gameTimer.initializeGameTimer()
         
         startRoundButton.setTitle(String(format: "Start Round %d", app.currentRoundNumber), forState: UIControlState.Normal)
         
@@ -108,14 +107,6 @@ class Play: UIViewController {
         roundTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: aSelector, userInfo: nil, repeats: true)
     }
     
-    func initializeGameTimer() {
-        gameTimerStart = NSDate.timeIntervalSinceReferenceDate()
-        updateGameTime()
-        
-        let aSelector : Selector = "updateGameTime"
-        gameTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: aSelector, userInfo: nil, repeats: true)
-    }
-    
     func updateRoundTime() {
         let currentTime = NSDate.timeIntervalSinceReferenceDate()
         
@@ -129,23 +120,6 @@ class Play: UIViewController {
         {
             finishRound()
         }
-    }
-    
-    func updateGameTime() {
-        let currentTime = NSDate.timeIntervalSinceReferenceDate()
-        
-        let elapsedTime: NSTimeInterval = currentTime - gameTimerStart
-        let gameTimerInSecondsRemaining = app.gameTimerInSeconds - Int(round(elapsedTime))
-        
-        let hours = UInt8(gameTimerInSecondsRemaining / 3600)
-        let minutes = UInt8(gameTimerInSecondsRemaining % 3600 / 60)
-        let seconds = UInt8(gameTimerInSecondsRemaining % 3600 % 60)
-
-        let strHours = String(format: "%02d", hours)
-        let strMinutes = String(format: "%02d", minutes)
-        let strSeconds = String(format: "%02d", seconds)
-        
-        gameTimerLabel.text = "\(strHours):\(strMinutes):\(strSeconds)"
     }
 
     override func didReceiveMemoryWarning() {
