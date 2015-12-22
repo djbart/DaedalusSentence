@@ -79,7 +79,7 @@ class RoundTimer: NSObject {
         let strSeconds = String(format: "%02d", roundTimerInSecondsRemaining)
         timerLabel.text = "\(strSeconds)"
         
-        if (roundTimerInSecondsRemaining == 0)
+        if (roundTimerInSecondsRemaining <= 0)
         {
             finishRound()
         }
