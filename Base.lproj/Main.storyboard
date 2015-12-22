@@ -582,6 +582,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5Z-Dr-SAe">
                                         <rect key="frame" x="500" y="5" width="31" height="30"/>
                                         <state key="normal" image="checked-button"/>
+                                        <connections>
+                                            <action selector="gameTimerTouched:" destination="9RU-gG-nPT" eventType="touchUpInside" id="j9b-5o-HXg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -836,6 +839,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="xX4-5D-Qs2" secondAttribute="trailing" constant="21" id="zYq-de-pAv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gameTimerButton" destination="T5Z-Dr-SAe" id="ndk-J6-il1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PiW-u5-fQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

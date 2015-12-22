@@ -15,12 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //General settings
     var currentRoundNumber = 1
-    let defaultGameTime = 3600
-    let defaultRoundTime = 5
     
     //Game timer settings
+    let defaultGameTime = 3600
     var gameTimerInSeconds = 3600
     var useGameTimer = true
+    
+    //Round timer settings
+    let defaultRoundTime = 5
+    var roundTimerInSeconds = 25
+    var useRoundTimer = true
+    
+    //Dice settings
+    var useDisabledLocationDie = true
+    var useRoundTimerDie = true
+    var useTheseusCardsDie = true
     
     //Player selection
     var PlayerRedSelected = false
