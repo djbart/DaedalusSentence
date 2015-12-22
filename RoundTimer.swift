@@ -30,6 +30,7 @@ class RoundTimer: NSObject {
     func setRoundTime(timeInSeconds: Int) {
         roundTimeInSeconds = timeInSeconds
         updateLabel(roundTimeInSeconds)
+        timerLabel.alpha = 0.3
     }
     
     func toggleTimer() {
@@ -48,6 +49,7 @@ class RoundTimer: NSObject {
         
         initializeRoundTimer()
         startRoundText = false
+        timerLabel.alpha = 1
     }
     
     func finishRound() {
@@ -59,11 +61,14 @@ class RoundTimer: NSObject {
         updateLabel(roundTimeInSeconds)
         
         startRoundText = true
+        timerLabel.alpha = 0.3
     }
     
     func initializeRoundTimer() {
         roundTimerStart = NSDate.timeIntervalSinceReferenceDate()
         updateRoundTime()
+        
+        timerLabel.alpha = 0.3
         
         let aSelector : Selector = "updateRoundTime"
         roundTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: aSelector, userInfo: nil, repeats: true)

@@ -23,6 +23,8 @@
             <string>Libertad</string>
             <string>Libertad</string>
             <string>Libertad</string>
+            <string>Libertad</string>
+            <string>Libertad</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -345,20 +347,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="db9-Ia-Pok">
                                 <rect key="frame" x="20" y="20" width="560" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gu-tD-dHg">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
-                                        <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="26"/>
-                                        <state key="normal" title="Quit game">
-                                            <color key="titleColor" red="0.40784313729999999" green="0.75686274509999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="etG-9C-mLD"/>
-                                        </connections>
-                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap dice to reroll" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spG-ky-OO2">
+                                        <rect key="frame" x="220" y="7" width="121" height="16"/>
+                                        <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="17"/>
+                                        <color key="textColor" red="0.40784313729999999" green="0.75686274509999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="3ZY-T6-Xf4"/>
+                                    <constraint firstItem="spG-ky-OO2" firstAttribute="centerX" secondItem="db9-Ia-Pok" secondAttribute="centerX" id="Njy-aF-Xbc"/>
+                                    <constraint firstItem="spG-ky-OO2" firstAttribute="centerY" secondItem="db9-Ia-Pok" secondAttribute="centerY" id="RBi-aJ-FZ4"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1IX-LF-Dd8">
@@ -437,57 +436,6 @@
                                         <exclude reference="Az3-Ic-myG"/>
                                     </mask>
                                 </variation>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xaF-eV-47V">
-                                <rect key="frame" x="20" y="432" width="560" height="80"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KnP-0E-Dyo">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="80"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56c-GG-bOw">
-                                                <rect key="frame" x="89" y="25" width="102" height="31"/>
-                                                <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="20"/>
-                                                <state key="normal" title="Start Round"/>
-                                                <connections>
-                                                    <action selector="startRoundButton:" destination="Tm4-w6-bCU" eventType="touchUpInside" id="eqe-t4-PS9"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="56c-GG-bOw" firstAttribute="centerY" secondItem="KnP-0E-Dyo" secondAttribute="centerY" id="KkE-zH-ax0"/>
-                                            <constraint firstItem="56c-GG-bOw" firstAttribute="centerX" secondItem="KnP-0E-Dyo" secondAttribute="centerX" id="L54-za-lGp"/>
-                                            <constraint firstAttribute="width" constant="280" id="o4n-MI-ozn"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yw3-bU-Prr">
-                                        <rect key="frame" x="280" y="0.0" width="280" height="80"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="Yw3-bU-Prr" firstAttribute="leading" secondItem="xaF-eV-47V" secondAttribute="leading" constant="280" id="63O-4c-YmK"/>
-                                    <constraint firstItem="KnP-0E-Dyo" firstAttribute="leading" secondItem="xaF-eV-47V" secondAttribute="leading" id="BQ0-Wf-4gQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="KnP-0E-Dyo" secondAttribute="bottom" id="G0o-Ip-FVF"/>
-                                    <constraint firstItem="Yw3-bU-Prr" firstAttribute="leading" secondItem="KnP-0E-Dyo" secondAttribute="trailing" id="N3C-Em-db7"/>
-                                    <constraint firstAttribute="height" constant="80" id="U8b-sZ-pXP"/>
-                                    <constraint firstAttribute="trailing" secondItem="Yw3-bU-Prr" secondAttribute="trailing" id="VCU-n2-i0A"/>
-                                    <constraint firstItem="Yw3-bU-Prr" firstAttribute="top" secondItem="KnP-0E-Dyo" secondAttribute="top" id="bU0-yg-etz"/>
-                                    <constraint firstItem="KnP-0E-Dyo" firstAttribute="top" secondItem="xaF-eV-47V" secondAttribute="top" id="etf-BC-P2O"/>
-                                    <constraint firstItem="Yw3-bU-Prr" firstAttribute="bottom" secondItem="KnP-0E-Dyo" secondAttribute="bottom" id="l8p-aO-G2d"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="63O-4c-YmK"/>
-                                    </mask>
-                                </variation>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NYn-WA-Mf9">
-                                <rect key="frame" x="20" y="520" width="560" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="TiC-EJ-3BF"/>
-                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yu-q4-b4d">
                                 <rect key="frame" x="20" y="260" width="560" height="80"/>
@@ -569,27 +517,66 @@
                                     <constraint firstAttribute="trailing" secondItem="U5J-Ji-Cyu" secondAttribute="trailing" id="voC-MI-jL9"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56c-GG-bOw">
+                                <rect key="frame" x="20" y="348" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lkx-Ac-baD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="26"/>
+                                <state key="normal" title="Start Round">
+                                    <color key="titleColor" red="0.40784313729999999" green="0.75686274509999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startRoundButton:" destination="Tm4-w6-bCU" eventType="touchUpInside" id="eqe-t4-PS9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gu-tD-dHg">
+                                <rect key="frame" x="20" y="540" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="wvf-tz-4e0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="26"/>
+                                <state key="normal" title="Quit game">
+                                    <color key="titleColor" red="0.40784313729999999" green="0.75686274509999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="etG-9C-mLD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFi-2y-o4B">
+                                <rect key="frame" x="20" y="492" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1Dy-ch-0Mk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="26"/>
+                                <state key="normal" title="You've made it!">
+                                    <color key="titleColor" red="0.40784313729999999" green="0.75686274509999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NYn-WA-Mf9" firstAttribute="trailing" secondItem="dgX-QL-Ddx" secondAttribute="trailingMargin" id="2d9-Gx-R1Q"/>
+                            <constraint firstItem="4Gu-tD-dHg" firstAttribute="leading" secondItem="dgX-QL-Ddx" secondAttribute="leadingMargin" id="1No-G3-aTL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WPO-NF-MEh" secondAttribute="trailing" constant="-20" id="3fw-A8-cfU"/>
                             <constraint firstItem="db9-Ia-Pok" firstAttribute="leading" secondItem="dgX-QL-Ddx" secondAttribute="leadingMargin" id="4Eu-3f-ZMp"/>
                             <constraint firstItem="8yu-q4-b4d" firstAttribute="centerY" secondItem="dgX-QL-Ddx" secondAttribute="centerY" id="6mL-Ur-VxL"/>
                             <constraint firstItem="8yu-q4-b4d" firstAttribute="leading" secondItem="dgX-QL-Ddx" secondAttribute="leadingMargin" id="74b-RQ-vJS"/>
-                            <constraint firstItem="xaF-eV-47V" firstAttribute="leading" secondItem="dgX-QL-Ddx" secondAttribute="leadingMargin" id="84x-UY-f3T"/>
+                            <constraint firstItem="56c-GG-bOw" firstAttribute="leading" secondItem="dgX-QL-Ddx" secondAttribute="leadingMargin" id="ErJ-YD-xj9"/>
+                            <constraint firstItem="CFi-2y-o4B" firstAttribute="leading" secondItem="dgX-QL-Ddx" secondAttribute="leadingMargin" id="Jzw-EL-n1w"/>
                             <constraint firstItem="WPO-NF-MEh" firstAttribute="leading" secondItem="dgX-QL-Ddx" secondAttribute="leadingMargin" constant="-20" id="O6z-7M-TMF"/>
-                            <constraint firstItem="NYn-WA-Mf9" firstAttribute="top" secondItem="xaF-eV-47V" secondAttribute="bottom" constant="8" id="QC5-zC-h5l"/>
                             <constraint firstItem="8yu-q4-b4d" firstAttribute="trailing" secondItem="dgX-QL-Ddx" secondAttribute="trailingMargin" id="Rca-le-eLu"/>
-                            <constraint firstItem="xaF-eV-47V" firstAttribute="trailing" secondItem="dgX-QL-Ddx" secondAttribute="trailingMargin" id="SMQ-IV-C5p"/>
-                            <constraint firstItem="NYn-WA-Mf9" firstAttribute="leading" secondItem="dgX-QL-Ddx" secondAttribute="leadingMargin" id="TmH-Dm-adm"/>
                             <constraint firstItem="WPO-NF-MEh" firstAttribute="top" secondItem="dgX-QL-Ddx" secondAttribute="topMargin" id="USR-lt-FMI"/>
                             <constraint firstItem="C4p-j8-2ZB" firstAttribute="top" secondItem="WPO-NF-MEh" secondAttribute="bottom" id="WxQ-VH-4hY"/>
+                            <constraint firstItem="4Gu-tD-dHg" firstAttribute="trailing" secondItem="dgX-QL-Ddx" secondAttribute="trailingMargin" id="YrL-5K-nSJ"/>
+                            <constraint firstItem="4Gu-tD-dHg" firstAttribute="top" secondItem="CFi-2y-o4B" secondAttribute="bottom" constant="8" id="Zeg-j0-3vf"/>
+                            <constraint firstItem="C4p-j8-2ZB" firstAttribute="top" secondItem="4Gu-tD-dHg" secondAttribute="bottom" constant="20" id="dXT-Xy-9kN"/>
                             <constraint firstItem="1IX-LF-Dd8" firstAttribute="top" secondItem="db9-Ia-Pok" secondAttribute="bottom" constant="8" id="daM-YG-e3U"/>
-                            <constraint firstItem="C4p-j8-2ZB" firstAttribute="top" secondItem="NYn-WA-Mf9" secondAttribute="bottom" constant="20" id="ld6-au-5lJ"/>
+                            <constraint firstItem="CFi-2y-o4B" firstAttribute="trailing" secondItem="dgX-QL-Ddx" secondAttribute="trailingMargin" id="hu7-5a-xTi"/>
+                            <constraint firstItem="56c-GG-bOw" firstAttribute="top" secondItem="8yu-q4-b4d" secondAttribute="bottom" constant="8" id="lB3-6V-BKw"/>
                             <constraint firstItem="db9-Ia-Pok" firstAttribute="top" secondItem="ug2-fL-5uu" secondAttribute="bottom" id="nlo-vD-ZB9"/>
                             <constraint firstItem="1IX-LF-Dd8" firstAttribute="trailing" secondItem="dgX-QL-Ddx" secondAttribute="trailingMargin" id="ozE-o2-Sr8"/>
                             <constraint firstItem="db9-Ia-Pok" firstAttribute="trailing" secondItem="dgX-QL-Ddx" secondAttribute="trailingMargin" id="qfr-T8-EAL"/>
+                            <constraint firstItem="56c-GG-bOw" firstAttribute="trailing" secondItem="dgX-QL-Ddx" secondAttribute="trailingMargin" id="vay-2y-rFJ"/>
                             <constraint firstItem="8yu-q4-b4d" firstAttribute="centerX" secondItem="dgX-QL-Ddx" secondAttribute="centerX" id="wT2-g7-90l"/>
                             <constraint firstItem="1IX-LF-Dd8" firstAttribute="leading" secondItem="dgX-QL-Ddx" secondAttribute="leadingMargin" id="zX2-R0-Pss"/>
                         </constraints>
@@ -599,6 +586,8 @@
                         <outlet property="dieSpecialImageView" destination="trA-RR-hCg" id="3Ta-hm-ncY"/>
                         <outlet property="dieTheseusImageView" destination="OF9-vg-jE7" id="Qgg-t7-b7r"/>
                         <outlet property="dieTimerImageView" destination="4j5-np-yL4" id="ced-bj-7lx"/>
+                        <outlet property="finishButton" destination="CFi-2y-o4B" id="exu-0a-2Wc"/>
+                        <outlet property="quitButton" destination="4Gu-tD-dHg" id="LDV-C8-4PG"/>
                         <outlet property="roundTimerLabel" destination="Gm1-aa-gkk" id="EEi-8E-aeA"/>
                         <outlet property="startRoundButton" destination="56c-GG-bOw" id="pzI-fm-Dlu"/>
                     </connections>
