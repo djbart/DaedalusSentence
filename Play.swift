@@ -130,6 +130,10 @@ class Play: UIViewController {
             dieTimerImageView.alpha = 0.3
             dieTheseusImageView.alpha = 0.3
         }
+        
+        if (!app.useDisabledLocationDie && !app.useRoundTimerDie && !app.useTheseusCardsDie) {
+            tapDiceLabel.hidden = true
+        }
     }
 
     override func didReceiveMemoryWarning() {

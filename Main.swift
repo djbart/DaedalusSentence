@@ -76,6 +76,8 @@ class Main: UIViewController {
         startGameButton.layer.cornerRadius = 10
         startGameButton.layer.borderWidth = 2
         startGameButton.layer.borderColor = UIColor(red:0.40, green:0.757, blue:0.898, alpha:1).CGColor /*#68c1e5*/
+        
+        app.currentRoundNumber = 1
     }
     
     func InitializePlayerSelection()
