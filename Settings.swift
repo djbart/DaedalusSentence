@@ -12,15 +12,60 @@ class Settings: UIViewController {
     let app = UIApplication.sharedApplication().delegate as! AppDelegate
     let checkedImageName = "checked-button"
     let uncheckedImageName = "unchecked-button"
+    let gameTimerMin = 600
+    let gameTimerMax = 7200
+    let gameTimerIncrement = 300
+    
+    let roundTimerMin = 10
+    let roundTimerMax = 60
+    let roundTimerIncrement = 5
     
     @IBOutlet weak var gameTimerButton: UIButton!
+    @IBOutlet weak var gameTimerLabel: UILabel!
+    @IBOutlet weak var gameTimerView: UIView!
     @IBAction func gameTimerTouched(sender: AnyObject) {
         toggle(gameTimerButton, selected: &app.useGameTimer)
+        gameTimerView.hidden = !app.useGameTimer
+    }
+    
+    @IBAction func gameTimerPreviousTouched(sender: AnyObject) {
+        if (app.gameTimerInSeconds > gameTimerMin) {
+            app.gameTimerInSeconds = app.gameTimerInSeconds - gameTimerIncrement
+        }
+        
+        gameTimerLabel.text = String(format: "%d min", app.gameTimerInSeconds / 60)
+    }
+    
+    @IBAction func gameTimerNextTouched(sender: AnyObject) {
+        if (app.gameTimerInSeconds < gameTimerMax) {
+            app.gameTimerInSeconds = app.gameTimerInSeconds + gameTimerIncrement
+        }
+        
+        gameTimerLabel.text = String(format: "%d min", app.gameTimerInSeconds / 60)
     }
 
     @IBOutlet weak var roundTimerButton: UIButton!
+    @IBOutlet weak var roundTimerLabel: UILabel!
+    @IBOutlet weak var roundTimerView: UIView!
     @IBAction func roundTimerTouched(sender: AnyObject) {
         toggle(roundTimerButton, selected: &app.useRoundTimer)
+        roundTimerView.hidden = !app.useRoundTimer
+    }
+    
+    @IBAction func roundTimerPreviousTouched(sender: AnyObject) {
+        if (app.roundTimerInSeconds > roundTimerMin) {
+            app.roundTimerInSeconds = app.roundTimerInSeconds - roundTimerIncrement
+        }
+        
+        roundTimerLabel.text = String(format: "%d sec", app.roundTimerInSeconds)
+    }
+    
+    @IBAction func roundTimerNextTouched(sender: AnyObject) {
+        if (app.roundTimerInSeconds < roundTimerMax) {
+            app.roundTimerInSeconds = app.roundTimerInSeconds + roundTimerIncrement
+        }
+        
+        roundTimerLabel.text = String(format: "%d sec", app.roundTimerInSeconds)
     }
     
     @IBOutlet weak var disabledLocationButton: UIButton!
@@ -47,6 +92,12 @@ class Settings: UIViewController {
         set(disabledLocationButton, selected: app.useDisabledLocationDie)
         set(roundTimeButton, selected: app.useRoundTimerDie)
         set(theseusCardsButton, selected: app.useTheseusCardsDie)
+        
+        gameTimerLabel.text = String(format: "%d min", app.gameTimerInSeconds / 60)
+        roundTimerLabel.text = String(format: "%d sec", app.roundTimerInSeconds)
+        
+        gameTimerView.hidden = !app.useGameTimer
+        roundTimerView.hidden = !app.useRoundTimer
     }
     
     func toggle(button: UIButton, selected: UnsafeMutablePointer<Bool>) {

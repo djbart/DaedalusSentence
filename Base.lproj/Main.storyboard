@@ -610,6 +610,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZW-3r-pZJ">
                                         <rect key="frame" x="500" y="5" width="31" height="30"/>
                                         <state key="normal" image="next-button"/>
+                                        <connections>
+                                            <action selector="gameTimerNextTouched:" destination="9RU-gG-nPT" eventType="touchUpInside" id="idw-OA-hbY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Wt-nC-rHf">
                                         <rect key="frame" x="353" y="5" width="31" height="30"/>
@@ -618,6 +621,9 @@
                                             <constraint firstAttribute="height" constant="30" id="dtm-Yd-22f"/>
                                         </constraints>
                                         <state key="normal" image="previous-button"/>
+                                        <connections>
+                                            <action selector="gameTimerPreviousTouched:" destination="9RU-gG-nPT" eventType="touchUpInside" id="Abd-Jp-rUn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -675,6 +681,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1A-yd-eSf">
                                         <rect key="frame" x="500" y="5" width="31" height="30"/>
                                         <state key="normal" image="next-button"/>
+                                        <connections>
+                                            <action selector="roundTimerNextTouched:" destination="9RU-gG-nPT" eventType="touchUpInside" id="ymf-4z-DFR"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayb-Ui-xBQ">
                                         <rect key="frame" x="353" y="5" width="31" height="30"/>
@@ -683,6 +692,9 @@
                                             <constraint firstAttribute="height" constant="30" id="TRT-t6-CFz"/>
                                         </constraints>
                                         <state key="normal" image="previous-button"/>
+                                        <connections>
+                                            <action selector="roundTimerPreviousTouched:" destination="9RU-gG-nPT" eventType="touchUpInside" id="Jp4-f2-js8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -698,22 +710,6 @@
                                     <constraint firstItem="ayb-Ui-xBQ" firstAttribute="top" secondItem="xX4-5D-Qs2" secondAttribute="top" constant="5" id="lFK-oY-ybp"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="o4Z-2r-crd"/>
                                     <constraint firstAttribute="bottom" secondItem="ayb-Ui-xBQ" secondAttribute="bottom" constant="5" id="qYY-8n-rel"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0LF-fS-rI4">
-                                <rect key="frame" x="20" y="346" width="539" height="40"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Randomizer dice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1F-2e-ce9">
-                                        <rect key="frame" x="10" y="10" width="149" height="20"/>
-                                        <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="DwE-b0-zR1"/>
-                                    <constraint firstAttribute="height" constant="40" id="ZFx-Fe-YiE"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="cVa-ts-Gr9"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eN7-ka-Q6J">
@@ -815,6 +811,22 @@
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="pxm-bL-sHT"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0LF-fS-rI4">
+                                <rect key="frame" x="20" y="346" width="539" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Randomizer dice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1F-2e-ce9">
+                                        <rect key="frame" x="10" y="10" width="149" height="20"/>
+                                        <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="DwE-b0-zR1"/>
+                                    <constraint firstAttribute="height" constant="40" id="ZFx-Fe-YiE"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="cVa-ts-Gr9"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -854,8 +866,12 @@
                     <connections>
                         <outlet property="disabledLocationButton" destination="1FO-sa-pcG" id="U61-sr-TbI"/>
                         <outlet property="gameTimerButton" destination="T5Z-Dr-SAe" id="ndk-J6-il1"/>
+                        <outlet property="gameTimerLabel" destination="5Tg-f3-0ad" id="UFL-fN-FxF"/>
+                        <outlet property="gameTimerView" destination="Kz8-FN-9tv" id="gR2-ca-gHS"/>
                         <outlet property="roundTimeButton" destination="h0Z-xS-g7c" id="TCG-JU-vR9"/>
                         <outlet property="roundTimerButton" destination="P6K-co-2Me" id="5vL-UI-hHf"/>
+                        <outlet property="roundTimerLabel" destination="FcT-Wn-QLj" id="2sm-y1-rJ9"/>
+                        <outlet property="roundTimerView" destination="xX4-5D-Qs2" id="HQr-EV-lhK"/>
                         <outlet property="theseusCardsButton" destination="ON7-EY-5La" id="3kX-Ii-y5d"/>
                     </connections>
                 </viewController>
