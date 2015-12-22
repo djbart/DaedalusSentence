@@ -15,18 +15,21 @@ class Play: UIViewController {
     @IBOutlet weak var gameTimerLabel: UILabel!
     var gameTimer: GameTimer!
     
+    @IBOutlet weak var tapDiceLabel: UILabel!
     @IBOutlet weak var roundTimerLabel: UILabel!
     @IBOutlet weak var startRoundButton: UIButton!
     var roundTimer: RoundTimer!
     
     var dieSpecial: Die!
     @IBOutlet weak var dieSpecialImageView: UIImageView!
+    @IBOutlet weak var dieSpecialButton: UIButton!
     @IBAction func dieSpecialTouch(sender: AnyObject) {
         dieSpecial.roll()
     }
     
     var dieTimer: Die!
     @IBOutlet weak var dieTimerImageView: UIImageView!
+    @IBOutlet weak var dieTimerButton: UIButton!
     @IBAction func dieTimerTouch(sender: AnyObject) {
         dieTimer.roll()
         roundTimer.setRoundTime((timeInSeconds: 5 * dieTimer.value + 10))
@@ -34,6 +37,7 @@ class Play: UIViewController {
     
     var dieTheseus: Die!
     @IBOutlet weak var dieTheseusImageView: UIImageView!
+    @IBOutlet weak var dieTheseusButton: UIButton!
     @IBAction func dieTheseusTouch(sender: AnyObject) {
         dieTheseus.roll()
     }
@@ -51,12 +55,22 @@ class Play: UIViewController {
         
         dieSpecial = Die.init(image: dieSpecialImageView, imageFileFormat: "die_special_%d")
         dieSpecial.roll()
+        dieSpecialImageView.hidden = !app.useDisabledLocationDie
+        dieSpecialButton.enabled = app.useDisabledLocationDie
         
         dieTimer = Die.init(image: dieTimerImageView, imageFileFormat: "die_timer_%d")
         dieTimer.roll()
+        dieTimerImageView.hidden = !app.useRoundTimerDie
+        dieTimerButton.enabled = app.useRoundTimerDie
         
         dieTheseus = Die.init(image: dieTheseusImageView, imageFileFormat: "die_theseus_%d")
         dieTheseus.roll()
+        dieTheseusImageView.hidden = !app.useTheseusCardsDie
+        dieTheseusButton.enabled = app.useTheseusCardsDie
+        
+        if (!app.useDisabledLocationDie && !app.useRoundTimerDie && !app.useTheseusCardsDie) {
+            tapDiceLabel.hidden = true
+        }
         
         gameTimer = GameTimer.init(label: gameTimerLabel)
         gameTimer.start()
@@ -72,16 +86,25 @@ class Play: UIViewController {
         finishButton.backgroundColor = UIColor.clearColor()
         finishButton.layer.cornerRadius = 10
         finishButton.layer.borderWidth = 2
-        finishButton.layer.borderColor = UIColor.greenColor().CGColor
+        finishButton.layer.borderColor = UIColor(red:0.40, green:0.757, blue:0.898, alpha:1).CGColor /*#68c1e5*/
         
         quitButton.backgroundColor = UIColor.clearColor()
         quitButton.layer.cornerRadius = 10
         quitButton.layer.borderWidth = 2
-        quitButton.layer.borderColor = UIColor.redColor().CGColor
+        quitButton.layer.borderColor = UIColor(red:0.40, green:0.757, blue:0.898, alpha:1).CGColor /*#68c1e5*/
     }
     
     @IBAction func startRoundButton(sender: AnyObject) {
         roundTimer.toggleTimer()
+        
+        if (roundTimer.startRoundText)
+        {
+            dieSpecial.roll()
+            dieTimer.roll()
+            dieTheseus.roll()
+            
+            roundTimer.setRoundTime((timeInSeconds: 5 * dieTimer.value + 10))
+        }
     }
 
     override func didReceiveMemoryWarning() {

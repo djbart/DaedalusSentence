@@ -376,7 +376,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="J2b-8L-23P"/>
                                             <constraint firstAttribute="width" constant="80" id="wTU-4H-jVl"/>
@@ -395,7 +394,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="GeG-SA-F7N"/>
                                             <constraint firstAttribute="height" constant="80" id="XJm-IF-oOC"/>
@@ -414,7 +412,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="MgU-1b-tb0"/>
                                             <constraint firstAttribute="width" constant="80" id="ij4-NL-bzq"/>
@@ -583,13 +580,17 @@
                     </view>
                     <connections>
                         <outlet property="GameTimerLabel" destination="fn0-Nd-ghx" id="i85-63-3j6"/>
+                        <outlet property="dieSpecialButton" destination="15s-DP-oo8" id="0qj-kh-LoA"/>
                         <outlet property="dieSpecialImageView" destination="trA-RR-hCg" id="3Ta-hm-ncY"/>
+                        <outlet property="dieTheseusButton" destination="aVe-wi-bep" id="dJ9-HM-l80"/>
                         <outlet property="dieTheseusImageView" destination="OF9-vg-jE7" id="Qgg-t7-b7r"/>
+                        <outlet property="dieTimerButton" destination="22F-eo-fA2" id="aU3-on-5Pe"/>
                         <outlet property="dieTimerImageView" destination="4j5-np-yL4" id="ced-bj-7lx"/>
                         <outlet property="finishButton" destination="CFi-2y-o4B" id="exu-0a-2Wc"/>
                         <outlet property="quitButton" destination="4Gu-tD-dHg" id="LDV-C8-4PG"/>
                         <outlet property="roundTimerLabel" destination="Gm1-aa-gkk" id="EEi-8E-aeA"/>
                         <outlet property="startRoundButton" destination="56c-GG-bOw" id="pzI-fm-Dlu"/>
+                        <outlet property="tapDiceLabel" destination="spG-ky-OO2" id="Jr8-5j-sue"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aQ-aH-4u7" userLabel="First Responder" sceneMemberID="firstResponder"/>
