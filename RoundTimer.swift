@@ -29,9 +29,7 @@ class RoundTimer: NSObject {
     
     func setRoundTime(timeInSeconds: Int) {
         roundTimeInSeconds = timeInSeconds
-        
-        let strSeconds = String(format: "%02d", roundTimeInSeconds)
-        timerLabel.text = "\(strSeconds)"
+        updateLabel(roundTimeInSeconds)
     }
     
     func toggleTimer() {
@@ -58,7 +56,8 @@ class RoundTimer: NSObject {
         app.currentRoundNumber++
         timerButton.setTitle(String(format: "Start Round %d", app.currentRoundNumber), forState: UIControlState.Normal)
         
-        timerLabel.text = String(format: "%02d", roundTimeInSeconds)
+        updateLabel(roundTimeInSeconds)
+        
         startRoundText = true
     }
     
@@ -76,8 +75,7 @@ class RoundTimer: NSObject {
         let elapsedTime: NSTimeInterval = currentTime - roundTimerStart
         let roundTimerInSecondsRemaining = roundTimeInSeconds - Int(round(elapsedTime))
         
-        let strSeconds = String(format: "%02d", roundTimerInSecondsRemaining)
-        timerLabel.text = "\(strSeconds)"
+        updateLabel(roundTimerInSecondsRemaining)
         
         if (roundTimerInSecondsRemaining <= 0)
         {
@@ -85,4 +83,15 @@ class RoundTimer: NSObject {
         }
     }
 
+    func updateLabel (roundTime: Int) {
+        let hours = UInt8(roundTime / 3600)
+        let minutes = UInt8(roundTime % 3600 / 60)
+        let seconds = UInt8(roundTime % 3600 % 60)
+        
+        let strHours = String(format: "%02d", hours)
+        let strMinutes = String(format: "%02d", minutes)
+        let strSeconds = String(format: "%02d", seconds)
+        
+        timerLabel.text = "\(strHours):\(strMinutes):\(strSeconds)"
+    }
 }
