@@ -587,6 +587,7 @@
                         <outlet property="dieTimerButton" destination="22F-eo-fA2" id="aU3-on-5Pe"/>
                         <outlet property="dieTimerImageView" destination="4j5-np-yL4" id="ced-bj-7lx"/>
                         <outlet property="finishButton" destination="CFi-2y-o4B" id="exu-0a-2Wc"/>
+                        <outlet property="gameTimerView" destination="LUJ-CD-nug" id="MEg-8l-gdI"/>
                         <outlet property="quitButton" destination="4Gu-tD-dHg" id="LDV-C8-4PG"/>
                         <outlet property="roundTimerLabel" destination="Gm1-aa-gkk" id="EEi-8E-aeA"/>
                         <outlet property="startRoundButton" destination="56c-GG-bOw" id="pzI-fm-Dlu"/>

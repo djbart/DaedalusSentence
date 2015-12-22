@@ -50,6 +50,12 @@ class Settings: UIViewController {
     @IBAction func roundTimerTouched(sender: AnyObject) {
         toggle(roundTimerButton, selected: &app.useRoundTimer)
         roundTimerView.hidden = !app.useRoundTimer
+        
+        if (app.useRoundTimer) {
+            app.useRoundTimerDie = false
+            
+            set(roundTimeButton, selected: app.useRoundTimerDie)
+        }
     }
     
     @IBAction func roundTimerPreviousTouched(sender: AnyObject) {
@@ -76,6 +82,14 @@ class Settings: UIViewController {
     @IBOutlet weak var roundTimeButton: UIButton!
     @IBAction func roundTimeTouched(sender: AnyObject) {
         toggle(roundTimeButton, selected: &app.useRoundTimerDie)
+        
+        if (app.useRoundTimerDie) {
+            app.useRoundTimer = false
+            
+            set(roundTimerButton, selected: app.useRoundTimer)
+            roundTimerView.hidden = !app.useRoundTimer
+        }
+
     }
     
     @IBOutlet weak var theseusCardsButton: UIButton!

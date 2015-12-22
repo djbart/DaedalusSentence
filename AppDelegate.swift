@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //Round timer settings
     let defaultRoundTime = 5
     var roundTimerInSeconds = 25
-    var useRoundTimer = true
+    var useRoundTimer = false
     
     //Dice settings
     var useDisabledLocationDie = true
@@ -32,8 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var useTheseusCardsDie = true
     
     //Player selection
-    var PlayerRedSelected = false
-    var PlayerYellowSelected = false
+    var PlayerRedSelected = true
+    var PlayerYellowSelected = true
     var PlayerBlueSelected = false
     var PlayerGreenSelected = false
     var PlayerPurpleSelected = false

@@ -15,6 +15,8 @@ class Play: UIViewController {
     @IBOutlet weak var gameTimerLabel: UILabel!
     var gameTimer: GameTimer!
     
+    @IBOutlet weak var gameTimerView: UIView!
+    
     @IBOutlet weak var tapDiceLabel: UILabel!
     @IBOutlet weak var roundTimerLabel: UILabel!
     @IBOutlet weak var startRoundButton: UIButton!
@@ -72,8 +74,15 @@ class Play: UIViewController {
             tapDiceLabel.hidden = true
         }
         
-        gameTimer = GameTimer.init(label: gameTimerLabel)
-        gameTimer.start()
+        if (app.useGameTimer)
+        {
+            gameTimer = GameTimer.init(label: gameTimerLabel)
+            gameTimer.start()
+        }
+        else
+        {
+            gameTimerView.hidden = true
+        }
         
         roundTimer = RoundTimer.init(label: roundTimerLabel, button: startRoundButton)
         roundTimer.setRoundTime((timeInSeconds: 5 * dieTimer.value + 10))
@@ -104,6 +113,22 @@ class Play: UIViewController {
             dieTheseus.roll()
             
             roundTimer.setRoundTime((timeInSeconds: 5 * dieTimer.value + 10))
+        }
+        
+        dieSpecialButton.enabled = roundTimer.startRoundText
+        dieTimerButton.enabled = roundTimer.startRoundText
+        dieTheseusButton.enabled = roundTimer.startRoundText
+        tapDiceLabel.hidden = !roundTimer.startRoundText
+        
+        if (roundTimer.startRoundText) {
+            dieSpecialImageView.alpha = 1
+            dieTimerImageView.alpha = 1
+            dieTheseusImageView.alpha = 1
+        }
+        else {
+            dieSpecialImageView.alpha = 0.3
+            dieTimerImageView.alpha = 0.3
+            dieTheseusImageView.alpha = 0.3
         }
     }
 
