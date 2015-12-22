@@ -646,6 +646,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6K-co-2Me">
                                         <rect key="frame" x="500" y="5" width="31" height="30"/>
                                         <state key="normal" image="checked-button"/>
+                                        <connections>
+                                            <action selector="roundTimerTouched:" destination="9RU-gG-nPT" eventType="touchUpInside" id="HpR-J1-pxI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -719,6 +722,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1FO-sa-pcG">
                                         <rect key="frame" x="500" y="5" width="31" height="30"/>
                                         <state key="normal" image="checked-button"/>
+                                        <connections>
+                                            <action selector="disabledLocationTouched:" destination="9RU-gG-nPT" eventType="touchUpInside" id="DWj-CQ-ER8"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disabled location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62h-xM-yAB">
                                         <rect key="frame" x="52" y="10" width="148" height="20"/>
@@ -748,6 +754,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0Z-xS-g7c">
                                         <rect key="frame" x="500" y="5" width="31" height="30"/>
                                         <state key="normal" image="checked-button"/>
+                                        <connections>
+                                            <action selector="roundTimeTouched:" destination="9RU-gG-nPT" eventType="touchUpInside" id="3hn-Nm-6yO"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BT5-8t-1va">
                                         <rect key="frame" x="52" y="10" width="100" height="20"/>
@@ -778,6 +787,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ON7-EY-5La">
                                         <rect key="frame" x="500" y="5" width="31" height="30"/>
                                         <state key="normal" image="checked-button"/>
+                                        <connections>
+                                            <action selector="theseusCardsTouched:" destination="9RU-gG-nPT" eventType="touchUpInside" id="4Lj-0l-xva"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theseus cards" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuX-Zr-Upe">
                                         <rect key="frame" x="52" y="10" width="119" height="20"/>
@@ -840,7 +852,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="disabledLocationButton" destination="1FO-sa-pcG" id="U61-sr-TbI"/>
                         <outlet property="gameTimerButton" destination="T5Z-Dr-SAe" id="ndk-J6-il1"/>
+                        <outlet property="roundTimeButton" destination="h0Z-xS-g7c" id="TCG-JU-vR9"/>
+                        <outlet property="roundTimerButton" destination="P6K-co-2Me" id="5vL-UI-hHf"/>
+                        <outlet property="theseusCardsButton" destination="ON7-EY-5La" id="3kX-Ii-y5d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PiW-u5-fQK" userLabel="First Responder" sceneMemberID="firstResponder"/>
