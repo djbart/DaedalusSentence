@@ -12,6 +12,7 @@
             <string>Libertad</string>
             <string>Libertad</string>
             <string>Libertad</string>
+            <string>Libertad</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -563,21 +564,54 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Usj-az-R6n">
-                                <rect key="frame" x="20" y="110" width="560" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="20" y="110" width="539" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gC5-Kb-ajQ">
+                                        <rect key="frame" x="10" y="10" width="117" height="20"/>
+                                        <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5Z-Dr-SAe">
+                                        <rect key="frame" x="500" y="5" width="31" height="30"/>
+                                        <state key="normal" image="checked-button"/>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="9ab-M3-1iz"/>
+                                    <constraint firstAttribute="trailing" secondItem="T5Z-Dr-SAe" secondAttribute="trailing" constant="8" id="0Gp-tZ-7yY"/>
+                                    <constraint firstAttribute="height" constant="40" id="9ab-M3-1iz"/>
+                                    <constraint firstAttribute="bottom" secondItem="T5Z-Dr-SAe" secondAttribute="bottom" constant="5" id="dmC-1i-Nr9"/>
+                                    <constraint firstItem="T5Z-Dr-SAe" firstAttribute="top" secondItem="Usj-az-R6n" secondAttribute="top" constant="5" id="qUf-sC-xlk"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kz8-FN-9tv">
+                                <rect key="frame" x="20" y="158" width="539" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZW-3r-pZJ">
+                                        <rect key="frame" x="500" y="5" width="31" height="30"/>
+                                        <state key="normal" image="next-button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Asa-8j-3Tj"/>
+                                    <constraint firstItem="qZW-3r-pZJ" firstAttribute="top" secondItem="Kz8-FN-9tv" secondAttribute="top" constant="5" id="OPx-Vw-w4o"/>
+                                    <constraint firstAttribute="height" constant="40" id="eTp-nd-JzD"/>
+                                    <constraint firstAttribute="trailing" secondItem="qZW-3r-pZJ" secondAttribute="trailing" constant="8" id="rm2-LO-YGF"/>
+                                    <constraint firstAttribute="bottom" secondItem="qZW-3r-pZJ" secondAttribute="bottom" constant="5" id="tNo-Vg-ZYD"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="J7A-7Z-CHc" firstAttribute="leading" secondItem="xxb-ZB-ceQ" secondAttribute="leadingMargin" constant="-20" id="6cO-Ur-TK3"/>
+                            <constraint firstItem="Kz8-FN-9tv" firstAttribute="leading" secondItem="xxb-ZB-ceQ" secondAttribute="leadingMargin" id="7qU-ZQ-ih1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="J7A-7Z-CHc" secondAttribute="trailing" constant="-20" id="K5k-UZ-y3g"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kz8-FN-9tv" secondAttribute="trailing" constant="21" id="KVt-U3-BSQ"/>
                             <constraint firstItem="h77-rq-1LU" firstAttribute="top" secondItem="sSG-4P-Bk2" secondAttribute="bottom" id="Ko0-YH-LGo"/>
                             <constraint firstItem="J7A-7Z-CHc" firstAttribute="top" secondItem="xxb-ZB-ceQ" secondAttribute="topMargin" id="L4d-ke-CXE"/>
                             <constraint firstItem="Usj-az-R6n" firstAttribute="leading" secondItem="xxb-ZB-ceQ" secondAttribute="leadingMargin" id="SqR-dI-T7F"/>
-                            <constraint firstItem="Usj-az-R6n" firstAttribute="trailing" secondItem="xxb-ZB-ceQ" secondAttribute="trailingMargin" id="Vlq-bm-doN"/>
+                            <constraint firstItem="Usj-az-R6n" firstAttribute="trailing" secondItem="xxb-ZB-ceQ" secondAttribute="trailingMargin" constant="-21" id="Vlq-bm-doN"/>
+                            <constraint firstItem="Kz8-FN-9tv" firstAttribute="top" secondItem="Usj-az-R6n" secondAttribute="bottom" constant="8" id="XOR-nD-o34"/>
                             <constraint firstItem="Usj-az-R6n" firstAttribute="top" secondItem="h77-rq-1LU" secondAttribute="bottom" id="Y4W-4J-CEA"/>
                             <constraint firstItem="h77-rq-1LU" firstAttribute="trailing" secondItem="xxb-ZB-ceQ" secondAttribute="trailingMargin" id="hZL-so-j8U"/>
                             <constraint firstItem="h77-rq-1LU" firstAttribute="top" secondItem="sSG-4P-Bk2" secondAttribute="bottom" id="mMu-5d-gLb"/>
@@ -593,9 +627,11 @@
     <resources>
         <image name="back-button" width="98" height="100"/>
         <image name="bg" width="320" height="568"/>
+        <image name="checked-button" width="31" height="31"/>
         <image name="die_special_1" width="80" height="80"/>
         <image name="die_theseus_1" width="80" height="80"/>
         <image name="die_timer_1" width="80" height="80"/>
+        <image name="next-button" width="31" height="31"/>
         <image name="player-blue" width="88" height="88"/>
         <image name="player-green" width="88" height="88"/>
         <image name="player-overlord" width="88" height="86"/>
