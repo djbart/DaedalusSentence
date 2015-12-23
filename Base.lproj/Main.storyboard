@@ -47,6 +47,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="673-eb-dGa">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-daedalus" translatesAutoresizingMaskIntoConstraints="NO" id="4CG-gC-JN9">
+                                <rect key="frame" x="20" y="28" width="560" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="K6n-Lm-lPz"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRh-DJ-Z4h">
                                 <rect key="frame" x="20" y="348" width="560" height="40"/>
                                 <constraints>
@@ -122,7 +128,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="u0U-Fo-kiP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -135,6 +141,7 @@
                             <constraint firstItem="cpP-5d-JFW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="J2E-8t-7Q4"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="s4z-SC-Nu3" secondAttribute="bottom" constant="20" id="NjE-nc-z4o"/>
                             <constraint firstAttribute="trailingMargin" secondItem="673-eb-dGa" secondAttribute="trailing" constant="-20" id="O13-nR-3ui"/>
+                            <constraint firstItem="4CG-gC-JN9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Oak-3g-nFt"/>
                             <constraint firstItem="mRh-DJ-Z4h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QSF-nm-zCA"/>
                             <constraint firstItem="673-eb-dGa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Rd9-ql-TIT"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="673-eb-dGa" secondAttribute="bottom" id="RoZ-OS-Ga3"/>
@@ -143,6 +150,7 @@
                             <constraint firstItem="s4z-SC-Nu3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eNm-pU-PSY"/>
                             <constraint firstItem="NUW-PI-onC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="es0-NY-zCV"/>
                             <constraint firstItem="s4z-SC-Nu3" firstAttribute="top" secondItem="cpP-5d-JFW" secondAttribute="bottom" constant="8" id="g7j-fT-A8V"/>
+                            <constraint firstItem="4CG-gC-JN9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="irA-0W-efy"/>
                             <constraint firstItem="s4z-SC-Nu3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lAV-TO-kGx"/>
                             <constraint firstItem="mRh-DJ-Z4h" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lpv-cY-nOQ"/>
                             <constraint firstItem="673-eb-dGa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="qGs-BM-MAg"/>
@@ -150,6 +158,7 @@
                             <constraint firstItem="dri-UV-Qxg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="s2H-cZ-wfd"/>
                             <constraint firstItem="cpP-5d-JFW" firstAttribute="top" secondItem="hne-ip-P7H" secondAttribute="bottom" constant="8" id="tAK-No-5cW"/>
                             <constraint firstItem="dri-UV-Qxg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="uZC-Nz-2Zx"/>
+                            <constraint firstItem="4CG-gC-JN9" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="uel-y2-h8d"/>
                             <constraint firstItem="mRh-DJ-Z4h" firstAttribute="top" secondItem="NUW-PI-onC" secondAttribute="bottom" constant="8" id="vgR-NX-5wD"/>
                         </constraints>
                     </view>
@@ -807,6 +816,7 @@
         <image name="die_special_1" width="80" height="80"/>
         <image name="die_theseus_1" width="80" height="80"/>
         <image name="die_timer_1" width="80" height="80"/>
+        <image name="logo-daedalus" width="1318" height="579"/>
         <image name="next-button" width="31" height="31"/>
         <image name="previous-button" width="31" height="31"/>
     </resources>
