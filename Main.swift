@@ -10,20 +10,49 @@ import UIKit
 
 class Main: UIViewController {
     let app = UIApplication.sharedApplication().delegate as! AppDelegate
+    let borderColor = UIColor(red:0.40, green:0.757, blue:0.898, alpha:1).CGColor /*#68c1e5*/
     
-    @IBOutlet weak var startGameButton: UIButton!
+    enum GameSettings {
+        case SecondTimeThrough
+        case Veteran
+        case Expert
+        case HellInSpace
+        case Custom
+    }
     
-    @IBAction func startGameButton(sender: UIButton) {
-        app.currentRoundNumber = 1;
+    @IBOutlet weak var secondTimeThroughButton: UIButton!
+    @IBAction func secondTimeThroughButton(sender: AnyObject) {
+        initGameSettings(GameSettings.SecondTimeThrough)
+    }
+    
+    @IBOutlet weak var veteranButton: UIButton!
+    @IBAction func veteranButton(sender: AnyObject) {
+        initGameSettings(GameSettings.Veteran)
+    }
+    
+    @IBOutlet weak var expertButton: UIButton!
+    @IBAction func ExpertButton(sender: AnyObject) {
+        initGameSettings(GameSettings.Expert)
+    }
+    
+    @IBOutlet weak var hellInSpaceButton: UIButton!
+    @IBAction func hellInSpaceButton(sender: AnyObject) {
+        initGameSettings(GameSettings.HellInSpace)
+    }
+    
+    @IBOutlet weak var customGameButton: UIButton!
+    @IBAction func customGameButton(sender: UIButton) {
+        initGameSettings(GameSettings.Custom)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        startGameButton.backgroundColor = UIColor.clearColor()
-        startGameButton.layer.cornerRadius = 10
-        startGameButton.layer.borderWidth = 2
-        startGameButton.layer.borderColor = UIColor(red:0.40, green:0.757, blue:0.898, alpha:1).CGColor /*#68c1e5*/
+        addBorder(secondTimeThroughButton)
+        addBorder(veteranButton)
+        addBorder(expertButton)
+        addBorder(hellInSpaceButton)
+        addBorder(customGameButton)
         
         app.currentRoundNumber = 1
     }
@@ -34,5 +63,16 @@ class Main: UIViewController {
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
+    }
+    
+    func addBorder(button: UIButton) {
+        button.backgroundColor = UIColor.clearColor()
+        button.layer.cornerRadius = 10
+        button.layer.borderWidth = 2
+        button.layer.borderColor = borderColor
+    }
+    
+    func initGameSettings(gameSettings: GameSettings) {
+        app.currentRoundNumber = 1;
     }
 }
