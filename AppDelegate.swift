@@ -30,14 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var useDisabledLocationDie = false
     var useRoundTimerDie = false
     var useTheseusCardsDie = false
-    
-    //Player selection
-    var PlayerRedSelected = false
-    var PlayerYellowSelected = false
-    var PlayerBlueSelected = false
-    var PlayerGreenSelected = false
-    var PlayerPurpleSelected = false
-    var PlayerOverlordSelected = false
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
