@@ -74,5 +74,49 @@ class Main: UIViewController {
     
     func initGameSettings(gameSettings: GameSettings) {
         app.currentRoundNumber = 1;
+        
+        switch (gameSettings) {
+        case GameSettings.SecondTimeThrough:
+            useDifficultyEnhancer1()
+            useDifficultyEnhancer3()
+        case GameSettings.Veteran:
+            useDifficultyEnhancer1()
+            useDifficultyEnhancer5()
+            useDifficultyEnhancer6()
+        case GameSettings.Expert:
+            useDifficultyEnhancer1()
+            useDifficultyEnhancer3()
+            useDifficultyEnhancer4()
+        case GameSettings.HellInSpace:
+            useDifficultyEnhancer1()
+            useDifficultyEnhancer3()
+            useDifficultyEnhancer4()
+            useDifficultyEnhancer5()
+        case GameSettings.Custom:
+            useDifficultyEnhancer3()
+        }
+        
+    }
+    
+    func useDifficultyEnhancer1() {
+        app.useTheseusCardsDie = true
+    }
+    
+    func useDifficultyEnhancer3() {
+        app.useGameTimer = true
+        app.gameTimerInSeconds = 3600
+    }
+    
+    func useDifficultyEnhancer4() {
+        app.useRoundTimerDie = true
+    }
+    
+    func useDifficultyEnhancer5() {
+        app.useDisabledLocationDie = true
+    }
+    
+    func useDifficultyEnhancer6() {
+        app.useRoundTimer = true
+        app.roundTimerInSeconds = 25
     }
 }

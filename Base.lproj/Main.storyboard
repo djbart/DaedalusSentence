@@ -476,9 +476,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Usj-az-R6n">
                                 <rect key="frame" x="20" y="110" width="560" height="40"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use game timer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gC5-Kb-ajQ">
-                                        <rect key="frame" x="10" y="10" width="134" height="20"/>
-                                        <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repairs imminent" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gC5-Kb-ajQ">
+                                        <rect key="frame" x="10" y="10" width="165" height="20"/>
+                                        <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -548,9 +548,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCL-3t-G0T">
                                 <rect key="frame" x="20" y="200" width="560" height="40"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use round timer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Im2-Q4-aIv">
-                                        <rect key="frame" x="10" y="10" width="139" height="20"/>
-                                        <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Automated security systems" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Im2-Q4-aIv">
+                                        <rect key="frame" x="10" y="10" width="247" height="20"/>
+                                        <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -629,9 +629,9 @@
                                             <action selector="disabledLocationTouched:" destination="9RU-gG-nPT" eventType="touchUpInside" id="DWj-CQ-ER8"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Random disabled location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62h-xM-yAB">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rolling lockdowns" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62h-xM-yAB">
                                         <rect key="frame" x="10" y="10" width="223" height="20"/>
-                                        <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -656,12 +656,12 @@
                                             <action selector="roundTimeTouched:" destination="9RU-gG-nPT" eventType="touchUpInside" id="3hn-Nm-6yO"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random round timer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BT5-8t-1va">
-                                        <rect key="frame" x="10" y="10" width="179" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emergency protocols" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BT5-8t-1va">
+                                        <rect key="frame" x="10" y="10" width="171" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="AIl-uX-tyg"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -696,12 +696,12 @@
                                             <action selector="theseusCardsTouched:" destination="9RU-gG-nPT" eventType="touchUpInside" id="4Lj-0l-xva"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random Theseus cards" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuX-Zr-Upe">
-                                        <rect key="frame" x="10" y="10" width="194" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Faulty algorithm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuX-Zr-Upe">
+                                        <rect key="frame" x="10" y="10" width="133" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="rtG-mY-wXc"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Libertad" family="Libertad" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
