@@ -31,7 +31,7 @@
         <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" id="BYZ-38-t0r" customClass="Main" customModule="DaedalusSentence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="BYZ-38-t0r" customClass="Main" customModule="TDS_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -332,7 +332,7 @@
         <!--Play-->
         <scene sceneID="HCp-tL-jWP">
             <objects>
-                <viewController id="Tm4-w6-bCU" customClass="Play" customModule="DaedalusSentence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Tm4-w6-bCU" customClass="Play" customModule="TDS_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ug2-fL-5uu"/>
                         <viewControllerLayoutGuide type="bottom" id="C4p-j8-2ZB"/>
@@ -601,7 +601,7 @@
         <!--Settings-->
         <scene sceneID="gMZ-Ts-PM9">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" id="9RU-gG-nPT" customClass="Settings" customModule="DaedalusSentence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="9RU-gG-nPT" customClass="Settings" customModule="TDS_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sSG-4P-Bk2"/>
                         <viewControllerLayoutGuide type="bottom" id="DiZ-el-FKM"/>
