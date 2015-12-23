@@ -10,6 +10,8 @@ import UIKit
 
 class Settings: UIViewController {
     let app = UIApplication.sharedApplication().delegate as! AppDelegate
+    let borderColor = UIColor(red:0.40, green:0.757, blue:0.898, alpha:1).CGColor /*#68c1e5*/
+    
     let checkedImageName = "checked-button"
     let uncheckedImageName = "unchecked-button"
     let gameTimerMin = 600
@@ -20,6 +22,7 @@ class Settings: UIViewController {
     let roundTimerMax = 60
     let roundTimerIncrement = 5
     
+    @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var gameTimerButton: UIButton!
     @IBOutlet weak var gameTimerLabel: UILabel!
     @IBOutlet weak var gameTimerView: UIView!
@@ -112,6 +115,8 @@ class Settings: UIViewController {
         
         gameTimerView.hidden = !app.useGameTimer
         roundTimerView.hidden = !app.useRoundTimer
+        
+        addBorder(startButton)
     }
     
     func toggle(button: UIButton, selected: UnsafeMutablePointer<Bool>) {
@@ -141,5 +146,12 @@ class Settings: UIViewController {
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
+    }
+    
+    func addBorder(button: UIButton) {
+        button.backgroundColor = UIColor.clearColor()
+        button.layer.cornerRadius = 10
+        button.layer.borderWidth = 2
+        button.layer.borderColor = borderColor
     }
 }

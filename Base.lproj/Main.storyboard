@@ -475,7 +475,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Usj-az-R6n">
-                                <rect key="frame" x="20" y="110" width="539" height="40"/>
+                                <rect key="frame" x="20" y="110" width="560" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gC5-Kb-ajQ">
                                         <rect key="frame" x="10" y="10" width="117" height="20"/>
@@ -484,7 +484,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5Z-Dr-SAe">
-                                        <rect key="frame" x="500" y="5" width="31" height="30"/>
+                                        <rect key="frame" x="521" y="5" width="31" height="30"/>
                                         <state key="normal" image="checked-button"/>
                                         <connections>
                                             <action selector="gameTimerTouched:" destination="9RU-gG-nPT" eventType="touchUpInside" id="j9b-5o-HXg"/>
@@ -500,10 +500,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kz8-FN-9tv">
-                                <rect key="frame" x="20" y="150" width="539" height="40"/>
+                                <rect key="frame" x="20" y="150" width="560" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tg-f3-0ad">
-                                        <rect key="frame" x="392" y="10" width="100" height="20"/>
+                                        <rect key="frame" x="413" y="10" width="100" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="W3e-VC-ksy"/>
                                             <constraint firstAttribute="width" constant="100" id="dA6-fK-Ri1"/>
@@ -513,14 +513,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZW-3r-pZJ">
-                                        <rect key="frame" x="500" y="5" width="31" height="30"/>
+                                        <rect key="frame" x="521" y="5" width="31" height="30"/>
                                         <state key="normal" image="next-button"/>
                                         <connections>
                                             <action selector="gameTimerNextTouched:" destination="9RU-gG-nPT" eventType="touchUpInside" id="idw-OA-hbY"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Wt-nC-rHf">
-                                        <rect key="frame" x="353" y="5" width="31" height="30"/>
+                                        <rect key="frame" x="374" y="5" width="31" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="31" id="DDk-3u-Pps"/>
                                             <constraint firstAttribute="height" constant="30" id="dtm-Yd-22f"/>
@@ -547,7 +547,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCL-3t-G0T">
-                                <rect key="frame" x="20" y="220" width="539" height="40"/>
+                                <rect key="frame" x="20" y="200" width="560" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Round timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Im2-Q4-aIv">
                                         <rect key="frame" x="10" y="10" width="117" height="20"/>
@@ -556,7 +556,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6K-co-2Me">
-                                        <rect key="frame" x="500" y="5" width="31" height="30"/>
+                                        <rect key="frame" x="521" y="5" width="31" height="30"/>
                                         <state key="normal" image="checked-button"/>
                                         <connections>
                                             <action selector="roundTimerTouched:" destination="9RU-gG-nPT" eventType="touchUpInside" id="HpR-J1-pxI"/>
@@ -573,10 +573,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xX4-5D-Qs2">
-                                <rect key="frame" x="20" y="260" width="539" height="40"/>
+                                <rect key="frame" x="20" y="240" width="560" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 sec" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcT-Wn-QLj">
-                                        <rect key="frame" x="392" y="10" width="100" height="20"/>
+                                        <rect key="frame" x="413" y="10" width="100" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="BGB-k8-3Io"/>
                                             <constraint firstAttribute="height" constant="20" id="EJ1-FV-pCo"/>
@@ -586,14 +586,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1A-yd-eSf">
-                                        <rect key="frame" x="500" y="5" width="31" height="30"/>
+                                        <rect key="frame" x="521" y="5" width="31" height="30"/>
                                         <state key="normal" image="next-button"/>
                                         <connections>
                                             <action selector="roundTimerNextTouched:" destination="9RU-gG-nPT" eventType="touchUpInside" id="ymf-4z-DFR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayb-Ui-xBQ">
-                                        <rect key="frame" x="353" y="5" width="31" height="30"/>
+                                        <rect key="frame" x="374" y="5" width="31" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="31" id="5MB-Cu-Ep0"/>
                                             <constraint firstAttribute="height" constant="30" id="TRT-t6-CFz"/>
@@ -621,7 +621,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0LF-fS-rI4">
-                                <rect key="frame" x="20" y="330" width="539" height="40"/>
+                                <rect key="frame" x="20" y="290" width="560" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Randomizer dice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1F-2e-ce9">
                                         <rect key="frame" x="10" y="10" width="149" height="20"/>
@@ -638,10 +638,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eN7-ka-Q6J">
-                                <rect key="frame" x="20" y="370" width="539" height="40"/>
+                                <rect key="frame" x="20" y="330" width="560" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1FO-sa-pcG">
-                                        <rect key="frame" x="500" y="5" width="31" height="30"/>
+                                        <rect key="frame" x="521" y="5" width="31" height="30"/>
                                         <state key="normal" image="checked-button"/>
                                         <connections>
                                             <action selector="disabledLocationTouched:" destination="9RU-gG-nPT" eventType="touchUpInside" id="DWj-CQ-ER8"/>
@@ -671,10 +671,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ny-FC-IYA">
-                                <rect key="frame" x="20" y="410" width="539" height="40"/>
+                                <rect key="frame" x="20" y="370" width="560" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0Z-xS-g7c">
-                                        <rect key="frame" x="500" y="5" width="31" height="30"/>
+                                        <rect key="frame" x="521" y="5" width="31" height="30"/>
                                         <state key="normal" image="checked-button"/>
                                         <connections>
                                             <action selector="roundTimeTouched:" destination="9RU-gG-nPT" eventType="touchUpInside" id="3hn-Nm-6yO"/>
@@ -705,10 +705,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DWT-ro-SRN">
-                                <rect key="frame" x="20" y="450" width="539" height="40"/>
+                                <rect key="frame" x="20" y="410" width="560" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ON7-EY-5La">
-                                        <rect key="frame" x="500" y="5" width="31" height="30"/>
+                                        <rect key="frame" x="521" y="5" width="31" height="30"/>
                                         <state key="normal" image="checked-button"/>
                                         <connections>
                                             <action selector="theseusCardsTouched:" destination="9RU-gG-nPT" eventType="touchUpInside" id="4Lj-0l-xva"/>
@@ -758,38 +758,38 @@
                         <constraints>
                             <constraint firstItem="DWT-ro-SRN" firstAttribute="leading" secondItem="xxb-ZB-ceQ" secondAttribute="leadingMargin" id="4UT-Bb-gRV"/>
                             <constraint firstItem="9Ny-FC-IYA" firstAttribute="top" secondItem="eN7-ka-Q6J" secondAttribute="bottom" id="53w-C1-jFW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bCL-3t-G0T" secondAttribute="trailing" constant="21" id="5Ta-o6-7VT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bCL-3t-G0T" secondAttribute="trailing" id="5Ta-o6-7VT"/>
                             <constraint firstItem="J7A-7Z-CHc" firstAttribute="leading" secondItem="xxb-ZB-ceQ" secondAttribute="leadingMargin" constant="-20" id="6cO-Ur-TK3"/>
                             <constraint firstItem="Kz8-FN-9tv" firstAttribute="leading" secondItem="xxb-ZB-ceQ" secondAttribute="leadingMargin" id="7qU-ZQ-ih1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="J7A-7Z-CHc" secondAttribute="trailing" constant="-20" id="K5k-UZ-y3g"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Kz8-FN-9tv" secondAttribute="trailing" constant="21" id="KVt-U3-BSQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kz8-FN-9tv" secondAttribute="trailing" id="KVt-U3-BSQ"/>
                             <constraint firstItem="h77-rq-1LU" firstAttribute="top" secondItem="sSG-4P-Bk2" secondAttribute="bottom" id="Ko0-YH-LGo"/>
                             <constraint firstItem="J7A-7Z-CHc" firstAttribute="top" secondItem="xxb-ZB-ceQ" secondAttribute="topMargin" id="L4d-ke-CXE"/>
-                            <constraint firstItem="bCL-3t-G0T" firstAttribute="top" secondItem="Kz8-FN-9tv" secondAttribute="bottom" constant="30" id="QJd-ko-Q69"/>
+                            <constraint firstItem="bCL-3t-G0T" firstAttribute="top" secondItem="Kz8-FN-9tv" secondAttribute="bottom" constant="10" id="QJd-ko-Q69"/>
                             <constraint firstItem="xX4-5D-Qs2" firstAttribute="top" secondItem="bCL-3t-G0T" secondAttribute="bottom" id="Rz1-ne-qz0"/>
                             <constraint firstItem="Usj-az-R6n" firstAttribute="leading" secondItem="xxb-ZB-ceQ" secondAttribute="leadingMargin" id="SqR-dI-T7F"/>
-                            <constraint firstItem="0LF-fS-rI4" firstAttribute="top" secondItem="xX4-5D-Qs2" secondAttribute="bottom" constant="30" id="TZP-xg-mDM"/>
+                            <constraint firstItem="0LF-fS-rI4" firstAttribute="top" secondItem="xX4-5D-Qs2" secondAttribute="bottom" constant="10" id="TZP-xg-mDM"/>
                             <constraint firstItem="UL0-63-TlH" firstAttribute="leading" secondItem="xxb-ZB-ceQ" secondAttribute="leadingMargin" id="VaS-Gq-Mkg"/>
-                            <constraint firstItem="Usj-az-R6n" firstAttribute="trailing" secondItem="xxb-ZB-ceQ" secondAttribute="trailingMargin" constant="-21" id="Vlq-bm-doN"/>
+                            <constraint firstItem="Usj-az-R6n" firstAttribute="trailing" secondItem="xxb-ZB-ceQ" secondAttribute="trailingMargin" id="Vlq-bm-doN"/>
                             <constraint firstItem="Kz8-FN-9tv" firstAttribute="top" secondItem="Usj-az-R6n" secondAttribute="bottom" id="XOR-nD-o34"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="DWT-ro-SRN" secondAttribute="trailing" constant="21" id="XYo-dt-1bk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DWT-ro-SRN" secondAttribute="trailing" id="XYo-dt-1bk"/>
                             <constraint firstItem="Usj-az-R6n" firstAttribute="top" secondItem="h77-rq-1LU" secondAttribute="bottom" id="Y4W-4J-CEA"/>
                             <constraint firstItem="9Ny-FC-IYA" firstAttribute="leading" secondItem="xxb-ZB-ceQ" secondAttribute="leadingMargin" id="bBw-iL-Xe3"/>
                             <constraint firstItem="xX4-5D-Qs2" firstAttribute="leading" secondItem="xxb-ZB-ceQ" secondAttribute="leadingMargin" id="c0x-nf-rdX"/>
                             <constraint firstItem="eN7-ka-Q6J" firstAttribute="top" secondItem="0LF-fS-rI4" secondAttribute="bottom" id="evK-RH-w2Y"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eN7-ka-Q6J" secondAttribute="trailing" constant="21" id="hVB-V2-toR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eN7-ka-Q6J" secondAttribute="trailing" id="hVB-V2-toR"/>
                             <constraint firstItem="h77-rq-1LU" firstAttribute="trailing" secondItem="xxb-ZB-ceQ" secondAttribute="trailingMargin" id="hZL-so-j8U"/>
                             <constraint firstItem="DWT-ro-SRN" firstAttribute="top" secondItem="9Ny-FC-IYA" secondAttribute="bottom" id="icy-Xq-vZZ"/>
                             <constraint firstItem="DiZ-el-FKM" firstAttribute="top" secondItem="UL0-63-TlH" secondAttribute="bottom" constant="20" id="k29-SL-5J0"/>
                             <constraint firstItem="h77-rq-1LU" firstAttribute="top" secondItem="sSG-4P-Bk2" secondAttribute="bottom" id="mMu-5d-gLb"/>
                             <constraint firstItem="0LF-fS-rI4" firstAttribute="leading" secondItem="xxb-ZB-ceQ" secondAttribute="leadingMargin" id="nYD-w4-ezG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0LF-fS-rI4" secondAttribute="trailing" constant="21" id="niF-2N-Z1v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0LF-fS-rI4" secondAttribute="trailing" id="niF-2N-Z1v"/>
                             <constraint firstItem="bCL-3t-G0T" firstAttribute="leading" secondItem="xxb-ZB-ceQ" secondAttribute="leadingMargin" id="pCs-9k-Ylb"/>
                             <constraint firstItem="DiZ-el-FKM" firstAttribute="top" secondItem="J7A-7Z-CHc" secondAttribute="bottom" id="pet-kt-Xxx"/>
                             <constraint firstItem="UL0-63-TlH" firstAttribute="trailing" secondItem="xxb-ZB-ceQ" secondAttribute="trailingMargin" id="rPf-3M-aRd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9Ny-FC-IYA" secondAttribute="trailing" constant="21" id="sL7-4z-Mfx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Ny-FC-IYA" secondAttribute="trailing" id="sL7-4z-Mfx"/>
                             <constraint firstItem="eN7-ka-Q6J" firstAttribute="leading" secondItem="xxb-ZB-ceQ" secondAttribute="leadingMargin" id="uge-rT-TPf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xX4-5D-Qs2" secondAttribute="trailing" constant="21" id="zYq-de-pAv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xX4-5D-Qs2" secondAttribute="trailing" id="zYq-de-pAv"/>
                         </constraints>
                     </view>
                     <connections>
@@ -801,6 +801,7 @@
                         <outlet property="roundTimerButton" destination="P6K-co-2Me" id="5vL-UI-hHf"/>
                         <outlet property="roundTimerLabel" destination="FcT-Wn-QLj" id="2sm-y1-rJ9"/>
                         <outlet property="roundTimerView" destination="xX4-5D-Qs2" id="HQr-EV-lhK"/>
+                        <outlet property="startButton" destination="UL0-63-TlH" id="w0y-C9-ZEB"/>
                         <outlet property="theseusCardsButton" destination="ON7-EY-5La" id="3kX-Ii-y5d"/>
                     </connections>
                 </viewController>
