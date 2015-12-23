@@ -73,7 +73,7 @@ class Main: UIViewController {
     }
     
     func initGameSettings(gameSettings: GameSettings) {
-        app.currentRoundNumber = 1;
+        initDefaultSettings()
         
         switch (gameSettings) {
         case GameSettings.SecondTimeThrough:
@@ -96,6 +96,24 @@ class Main: UIViewController {
             useDifficultyEnhancer3()
         }
         
+    }
+    
+    func initDefaultSettings() {
+        app.currentRoundNumber = 1
+        
+        //Game timer settings
+        app.gameTimerInSeconds = 3600
+        app.useGameTimer = true
+        
+        //Round timer settings
+        app.roundTimerInSeconds = 25
+        app.useRoundTimer = false
+        
+        //Dice settings
+        app.useDisabledLocationDie = false
+        app.useRoundTimerDie = false
+        app.useTheseusCardsDie = false
+
     }
     
     func useDifficultyEnhancer1() {
