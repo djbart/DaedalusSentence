@@ -27,13 +27,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var useRoundTimer = false
     
     //Dice settings
-    var useDisabledLocationDie = true
-    var useRoundTimerDie = true
-    var useTheseusCardsDie = true
+    var useDisabledLocationDie = false
+    var useRoundTimerDie = false
+    var useTheseusCardsDie = false
     
     //Player selection
-    var PlayerRedSelected = true
-    var PlayerYellowSelected = true
+    var PlayerRedSelected = false
+    var PlayerYellowSelected = false
     var PlayerBlueSelected = false
     var PlayerGreenSelected = false
     var PlayerPurpleSelected = false
