@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -34,7 +35,7 @@
         <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" id="BYZ-38-t0r" customClass="Main" customModule="TDS_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="BYZ-38-t0r" customClass="Main" customModule="Daedalus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -176,7 +177,7 @@
         <!--Play-->
         <scene sceneID="HCp-tL-jWP">
             <objects>
-                <viewController id="Tm4-w6-bCU" customClass="Play" customModule="TDS_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Tm4-w6-bCU" customClass="Play" customModule="Daedalus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ug2-fL-5uu"/>
                         <viewControllerLayoutGuide type="bottom" id="C4p-j8-2ZB"/>
@@ -207,58 +208,25 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1IX-LF-Dd8">
                                 <rect key="frame" x="20" y="58" width="560" height="80"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxa-cz-U0y">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxa-cz-U0y" customClass="DiceControl" customModule="Daedalus" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="die_special_1" translatesAutoresizingMaskIntoConstraints="NO" id="trA-RR-hCg">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15s-DP-oo8">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <connections>
-                                                    <action selector="dieSpecialTouch:" destination="Tm4-w6-bCU" eventType="touchUpInside" id="myb-LO-qWU"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="J2b-8L-23P"/>
                                             <constraint firstAttribute="width" constant="80" id="wTU-4H-jVl"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N97-mG-ntE">
-                                        <rect key="frame" x="240" y="0.0" width="80" height="80"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="die_timer_1" translatesAutoresizingMaskIntoConstraints="NO" id="4j5-np-yL4">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22F-eo-fA2">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <connections>
-                                                    <action selector="dieTimerTouch:" destination="Tm4-w6-bCU" eventType="touchUpInside" id="CNy-Vq-joN"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="GeG-SA-F7N"/>
-                                            <constraint firstAttribute="height" constant="80" id="XJm-IF-oOC"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOM-l0-Zml">
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="iOM-l0-Zml" customClass="DiceControl" customModule="Daedalus" customModuleProvider="target">
                                         <rect key="frame" x="480" y="0.0" width="80" height="80"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="die_theseus_1" translatesAutoresizingMaskIntoConstraints="NO" id="OF9-vg-jE7">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVe-wi-bep">
-                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                <connections>
-                                                    <action selector="dieTheseusTouch:" destination="Tm4-w6-bCU" eventType="touchUpInside" id="nHi-FS-zsN"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="MgU-1b-tb0"/>
                                             <constraint firstAttribute="width" constant="80" id="ij4-NL-bzq"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N97-mG-ntE" customClass="DiceControl" customModule="Daedalus" customModuleProvider="target">
+                                        <rect key="frame" x="240" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="GeG-SA-F7N"/>
+                                            <constraint firstAttribute="height" constant="80" id="XJm-IF-oOC"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -424,12 +392,9 @@
                     </view>
                     <connections>
                         <outlet property="GameTimerLabel" destination="fn0-Nd-ghx" id="i85-63-3j6"/>
-                        <outlet property="dieSpecialButton" destination="15s-DP-oo8" id="0qj-kh-LoA"/>
-                        <outlet property="dieSpecialImageView" destination="trA-RR-hCg" id="3Ta-hm-ncY"/>
-                        <outlet property="dieTheseusButton" destination="aVe-wi-bep" id="dJ9-HM-l80"/>
-                        <outlet property="dieTheseusImageView" destination="OF9-vg-jE7" id="Qgg-t7-b7r"/>
-                        <outlet property="dieTimerButton" destination="22F-eo-fA2" id="aU3-on-5Pe"/>
-                        <outlet property="dieTimerImageView" destination="4j5-np-yL4" id="ced-bj-7lx"/>
+                        <outlet property="dieSpecial" destination="hxa-cz-U0y" id="S3x-JH-5aV"/>
+                        <outlet property="dieTheseus" destination="iOM-l0-Zml" id="vqv-Ib-f1k"/>
+                        <outlet property="dieTimer" destination="N97-mG-ntE" id="ijS-GQ-paM"/>
                         <outlet property="finishButton" destination="CFi-2y-o4B" id="exu-0a-2Wc"/>
                         <outlet property="gameTimerView" destination="LUJ-CD-nug" id="MEg-8l-gdI"/>
                         <outlet property="quitButton" destination="4Gu-tD-dHg" id="LDV-C8-4PG"/>
@@ -445,7 +410,7 @@
         <!--Settings-->
         <scene sceneID="gMZ-Ts-PM9">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" id="9RU-gG-nPT" customClass="Settings" customModule="TDS_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="9RU-gG-nPT" customClass="Settings" customModule="Daedalus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sSG-4P-Bk2"/>
                         <viewControllerLayoutGuide type="bottom" id="DiZ-el-FKM"/>
@@ -799,15 +764,12 @@
         <image name="back-button" width="98" height="100"/>
         <image name="bg" width="320" height="568"/>
         <image name="checked-button" width="31" height="31"/>
-        <image name="die_special_1" width="80" height="80"/>
-        <image name="die_theseus_1" width="80" height="80"/>
-        <image name="die_timer_1" width="80" height="80"/>
         <image name="logo-daedalus" width="1318" height="579"/>
         <image name="next-button" width="31" height="31"/>
         <image name="previous-button" width="31" height="31"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="snF-se-hO3"/>
         <segue reference="jN6-zv-7sj"/>
+        <segue reference="etG-9C-mLD"/>
     </inferredMetricsTieBreakers>
 </document>

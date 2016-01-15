@@ -6,11 +6,14 @@
 //  Copyright © 2015 Cripplefish Games. All rights reserved.
 //
 
+import AVFoundation
 import Foundation
 import UIKit
 
 class RoundTimer: NSObject {
     let app = UIApplication.sharedApplication().delegate as! AppDelegate
+    
+    var audioPlayer = AVAudioPlayer()
     
     var roundTimerStart = NSTimeInterval()
     var roundTimer = NSTimer()
@@ -47,6 +50,17 @@ class RoundTimer: NSObject {
     func startRound(){
         timerButton.setTitle(String(format: "End Round %d", app.currentRoundNumber), forState: UIControlState.Normal)
         
+        let path = NSBundle.mainBundle().URLForResource("Thomas", withExtension: "mp3")
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOfURL: path!)
+        }
+        catch {
+            
+        }
+        
+        audioPlayer.play()
+        
         initializeRoundTimer()
         startRoundText = false
         timerLabel.alpha = 1
@@ -59,6 +73,9 @@ class RoundTimer: NSObject {
         timerButton.setTitle(String(format: "Start Round %d", app.currentRoundNumber), forState: UIControlState.Normal)
         
         updateLabel(roundTimeInSeconds)
+        
+        audioPlayer.stop()
+        audioPlayer.currentTime = 0
         
         startRoundText = true
         timerLabel.alpha = 0.3

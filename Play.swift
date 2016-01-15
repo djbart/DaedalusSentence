@@ -22,27 +22,9 @@ class Play: UIViewController {
     @IBOutlet weak var startRoundButton: UIButton!
     var roundTimer: RoundTimer!
     
-    var dieSpecial: Die!
-    @IBOutlet weak var dieSpecialImageView: UIImageView!
-    @IBOutlet weak var dieSpecialButton: UIButton!
-    @IBAction func dieSpecialTouch(sender: AnyObject) {
-        dieSpecial.roll()
-    }
-    
-    var dieTimer: Die!
-    @IBOutlet weak var dieTimerImageView: UIImageView!
-    @IBOutlet weak var dieTimerButton: UIButton!
-    @IBAction func dieTimerTouch(sender: AnyObject) {
-        dieTimer.roll()
-        roundTimer.setRoundTime((timeInSeconds: 5 * dieTimer.value + 10))
-    }
-    
-    var dieTheseus: Die!
-    @IBOutlet weak var dieTheseusImageView: UIImageView!
-    @IBOutlet weak var dieTheseusButton: UIButton!
-    @IBAction func dieTheseusTouch(sender: AnyObject) {
-        dieTheseus.roll()
-    }
+    @IBOutlet weak var dieSpecial: DiceControl!
+    @IBOutlet weak var dieTimer: DiceControl!
+    @IBOutlet weak var dieTheseus: DiceControl!
     
     @IBOutlet weak var finishButton: UIButton!
     @IBOutlet weak var quitButton: UIButton!
@@ -55,20 +37,17 @@ class Play: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dieSpecial = Die.init(image: dieSpecialImageView, imageFileFormat: "die_special_%d")
+        dieSpecial.imageFileFormat = "die_special_%d"
         dieSpecial.roll()
-        dieSpecialImageView.hidden = !app.useDisabledLocationDie
-        dieSpecialButton.enabled = app.useDisabledLocationDie
+        dieSpecial.hidden = !app.useDisabledLocationDie
         
-        dieTimer = Die.init(image: dieTimerImageView, imageFileFormat: "die_timer_%d")
+        dieTimer.imageFileFormat = "die_timer_%d"
         dieTimer.roll()
-        dieTimerImageView.hidden = !app.useRoundTimerDie
-        dieTimerButton.enabled = app.useRoundTimerDie
+        dieTimer.hidden = !app.useRoundTimerDie
         
-        dieTheseus = Die.init(image: dieTheseusImageView, imageFileFormat: "die_theseus_%d")
+        dieTheseus.imageFileFormat = "die_theseus_%d"
+        dieTheseus.hidden = !app.useTheseusCardsDie
         dieTheseus.roll()
-        dieTheseusImageView.hidden = !app.useTheseusCardsDie
-        dieTheseusButton.enabled = app.useTheseusCardsDie
         
         if (!app.useDisabledLocationDie && !app.useRoundTimerDie && !app.useTheseusCardsDie) {
             tapDiceLabel.hidden = true
@@ -110,25 +89,23 @@ class Play: UIViewController {
         {
             dieSpecial.roll()
             dieTimer.roll()
+            roundTimer.setRoundTime((timeInSeconds: 5 * dieTimer.value + 10))
             dieTheseus.roll()
             
             roundTimer.setRoundTime((timeInSeconds: 5 * dieTimer.value + 10))
         }
         
-        dieSpecialButton.enabled = roundTimer.startRoundText
-        dieTimerButton.enabled = roundTimer.startRoundText
-        dieTheseusButton.enabled = roundTimer.startRoundText
         tapDiceLabel.hidden = !roundTimer.startRoundText
         
         if (roundTimer.startRoundText) {
-            dieSpecialImageView.alpha = 1
-            dieTimerImageView.alpha = 1
-            dieTheseusImageView.alpha = 1
+            dieSpecial.alpha = 1
+            dieTimer.alpha = 1
+            dieTheseus.alpha = 1
         }
         else {
-            dieSpecialImageView.alpha = 0.3
-            dieTimerImageView.alpha = 0.3
-            dieTheseusImageView.alpha = 0.3
+            dieSpecial.alpha = 0.3
+            dieTimer.alpha = 0.3
+            dieTheseus.alpha = 0.3
         }
         
         if (!app.useDisabledLocationDie && !app.useRoundTimerDie && !app.useTheseusCardsDie) {
