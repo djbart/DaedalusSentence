@@ -8,7 +8,7 @@ class DiceControl: UIView {
     var image: UIImageView!
     var button: UIButton!
     var imageFileFormat: String!
-    var value = 1;
+    var value = Observable<Int>(1);
     
     // MARK: Initialization
     required init?(coder aDecoder: NSCoder) {
@@ -49,8 +49,8 @@ class DiceControl: UIView {
             self.image.alpha = 0.0
             }, completion: nil)
         
-        value = Int(arc4random() % 6) + 1
-        let imageName = String(format: self.imageFileFormat, value)
+        value.set(Int(arc4random() % 6) + 1)
+        let imageName = String(format: self.imageFileFormat, value.get())
         image.image = UIImage(named: imageName)
         
         UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
