@@ -1,6 +1,6 @@
 import UIKit
 
-class DiceControl: UIView {
+class DiceView: UIView {
     // MARK: Constants
     let borderColor = UIColor(red:0.40, green:0.757, blue:0.898, alpha:1).CGColor /*#68c1e5*/
     

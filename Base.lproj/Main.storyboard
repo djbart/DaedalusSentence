@@ -208,21 +208,21 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1IX-LF-Dd8">
                                 <rect key="frame" x="20" y="58" width="560" height="80"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxa-cz-U0y" customClass="DiceControl" customModule="Daedalus" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hxa-cz-U0y" customClass="DiceView" customModule="Daedalus" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="J2b-8L-23P"/>
                                             <constraint firstAttribute="width" constant="80" id="wTU-4H-jVl"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="iOM-l0-Zml" customClass="DiceControl" customModule="Daedalus" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="80" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="iOM-l0-Zml" customClass="DiceView" customModule="Daedalus" customModuleProvider="target">
                                         <rect key="frame" x="480" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="MgU-1b-tb0"/>
                                             <constraint firstAttribute="width" constant="80" id="ij4-NL-bzq"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N97-mG-ntE" customClass="DiceControl" customModule="Daedalus" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N97-mG-ntE" customClass="DiceView" customModule="Daedalus" customModuleProvider="target">
                                         <rect key="frame" x="240" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="GeG-SA-F7N"/>
@@ -339,7 +339,7 @@
                                     <action selector="startRoundButton:" destination="Tm4-w6-bCU" eventType="touchUpInside" id="eqe-t4-PS9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gu-tD-dHg">
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="40" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gu-tD-dHg" customClass="DaedalusButton" customModule="Daedalus" customModuleProvider="target">
                                 <rect key="frame" x="20" y="540" width="560" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="wvf-tz-4e0"/>
@@ -349,7 +349,7 @@
                                     <color key="titleColor" red="0.40784313729999999" green="0.75686274509999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="etG-9C-mLD"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="qhr-2d-UmY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFi-2y-o4B">
@@ -397,7 +397,6 @@
                         <outlet property="dieTimer" destination="N97-mG-ntE" id="ijS-GQ-paM"/>
                         <outlet property="finishButton" destination="CFi-2y-o4B" id="exu-0a-2Wc"/>
                         <outlet property="gameTimerView" destination="LUJ-CD-nug" id="MEg-8l-gdI"/>
-                        <outlet property="quitButton" destination="4Gu-tD-dHg" id="LDV-C8-4PG"/>
                         <outlet property="roundTimerLabel" destination="Gm1-aa-gkk" id="EEi-8E-aeA"/>
                         <outlet property="startRoundButton" destination="56c-GG-bOw" id="pzI-fm-Dlu"/>
                         <outlet property="tapDiceLabel" destination="spG-ky-OO2" id="Jr8-5j-sue"/>
@@ -769,7 +768,7 @@
         <image name="previous-button" width="31" height="31"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="qhr-2d-UmY"/>
         <segue reference="jN6-zv-7sj"/>
-        <segue reference="etG-9C-mLD"/>
     </inferredMetricsTieBreakers>
 </document>
