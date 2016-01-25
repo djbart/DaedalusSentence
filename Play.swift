@@ -11,14 +11,12 @@ class Play: UIViewController {
     
     @IBOutlet weak var tapDiceLabel: UILabel!
     @IBOutlet weak var roundTimerLabel: UILabel!
-    @IBOutlet weak var startRoundButton: UIButton!
+    @IBOutlet weak var startRoundButton: DaedalusButton!
     var roundTimer: RoundTimer!
     
     @IBOutlet weak var dieSpecial: DiceView!
     @IBOutlet weak var dieTimer: DiceView!
     @IBOutlet weak var dieTheseus: DiceView!
-    
-    @IBOutlet weak var finishButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,16 +49,6 @@ class Play: UIViewController {
         {
             gameTimerView.hidden = true
         }
-        
-        startRoundButton.backgroundColor = UIColor.clearColor()
-        startRoundButton.layer.cornerRadius = 10
-        startRoundButton.layer.borderWidth = 2
-        startRoundButton.layer.borderColor = UIColor(red:0.40, green:0.757, blue:0.898, alpha:1).CGColor /*#68c1e5*/
-        
-        finishButton.backgroundColor = UIColor.clearColor()
-        finishButton.layer.cornerRadius = 10
-        finishButton.layer.borderWidth = 2
-        finishButton.layer.borderColor = UIColor(red:0.40, green:0.757, blue:0.898, alpha:1).CGColor /*#68c1e5*/
     }
     
     func dieTimerValueDidChange(oldValue: Int, newValue: Int) {

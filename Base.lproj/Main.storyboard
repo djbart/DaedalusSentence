@@ -326,7 +326,7 @@
                                     <constraint firstAttribute="trailing" secondItem="U5J-Ji-Cyu" secondAttribute="trailing" id="voC-MI-jL9"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56c-GG-bOw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56c-GG-bOw" customClass="DaedalusButton" customModule="Daedalus" customModuleProvider="target">
                                 <rect key="frame" x="20" y="348" width="560" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="lkx-Ac-baD"/>
@@ -352,7 +352,7 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="qhr-2d-UmY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFi-2y-o4B">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFi-2y-o4B" customClass="DaedalusButton" customModule="Daedalus" customModuleProvider="target">
                                 <rect key="frame" x="20" y="492" width="560" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="1Dy-ch-0Mk"/>
@@ -395,7 +395,6 @@
                         <outlet property="dieSpecial" destination="hxa-cz-U0y" id="S3x-JH-5aV"/>
                         <outlet property="dieTheseus" destination="iOM-l0-Zml" id="vqv-Ib-f1k"/>
                         <outlet property="dieTimer" destination="N97-mG-ntE" id="ijS-GQ-paM"/>
-                        <outlet property="finishButton" destination="CFi-2y-o4B" id="exu-0a-2Wc"/>
                         <outlet property="gameTimerView" destination="LUJ-CD-nug" id="MEg-8l-gdI"/>
                         <outlet property="roundTimerLabel" destination="Gm1-aa-gkk" id="EEi-8E-aeA"/>
                         <outlet property="startRoundButton" destination="56c-GG-bOw" id="pzI-fm-Dlu"/>

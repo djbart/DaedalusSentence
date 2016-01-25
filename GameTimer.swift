@@ -1,11 +1,3 @@
-//
-//  GameTimer.swift
-//  DaedalusSentence
-//
-//  Created by Bart Waeterschoot on 21/12/15.
-//  Copyright © 2015 Cripplefish Games. All rights reserved.
-//
-
 import Foundation
 import UIKit
 

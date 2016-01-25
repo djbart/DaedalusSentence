@@ -1,11 +1,3 @@
-//
-//  RoundTimer.swift
-//  DaedalusSentence
-//
-//  Created by Bart Waeterschoot on 21/12/15.
-//  Copyright © 2015 Cripplefish Games. All rights reserved.
-//
-
 import AVFoundation
 import Foundation
 import UIKit
@@ -59,7 +51,20 @@ class RoundTimer: NSObject {
             
         }
         
-        audioPlayer.play()
+        if (roundTimeInSeconds == 40)
+        {
+            audioPlayer.prepareToPlay()
+            audioPlayer.currentTime = 0
+            audioPlayer.playAtTime(5)
+        }
+        else
+        {
+            audioPlayer.currentTime = Double(35 - roundTimeInSeconds)
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+        }
+        
+        fadePlayer(audioPlayer, fromVolume: 0.0, toVolume: 1.0, overTime: 1.0)
         
         initializeRoundTimer()
         startRoundText = false
@@ -115,5 +120,34 @@ class RoundTimer: NSObject {
         let strSeconds = String(format: "%02d", seconds)
         
         timerLabel.text = "\(strHours):\(strMinutes):\(strSeconds)"
+    }
+    
+    func fadePlayer(player: AVAudioPlayer,
+        fromVolume startVolume : Float,
+        toVolume endVolume : Float,
+        overTime time : Float) {
+            
+            // Update the volume every 1/100 of a second
+            let fadeSteps : Int = Int(time) * 100
+            // Work out how much time each step will take
+            let timePerStep : Float = 1 / 100.0
+            
+            player.volume = startVolume;
+            
+            // Schedule a number of volume changes
+            for step in 0...fadeSteps {
+                let delayInSeconds : Float = Float(step) * timePerStep
+                
+                let popTime = dispatch_time(DISPATCH_TIME_NOW,
+                    Int64(delayInSeconds * Float(NSEC_PER_SEC)));
+                dispatch_after(popTime, dispatch_get_main_queue()) {
+                    
+                    let fraction = (Float(step) / Float(fadeSteps))
+                    
+                    player.volume = startVolume +
+                        (endVolume - startVolume) * fraction
+                    
+                }
+            }
     }
 }
